@@ -1,0 +1,12 @@
+<ul id="questions_list">
+  <% decorated_questions do |question| %>
+    <li>
+      <label><input type="checkbox" data-picker-text="<%= question.id_and_title(html_escape: true) %>" data-picker-url="<%= picker_path %>" value="<%= question.id %>" data-picker-choose> <%= question.id_and_title(html_escape: true) %> (<%= question.reference %>)</label>
+    </li>
+  <% end %>
+  <% if more_questions? %>
+    <li><div class="callout warning"><%= t("questions_picker.more_questions", scope: "decidim.questions", number: more_questions_count) %></div>
+    </li>
+  <% end %>
+</ul>
+<div id="no_questions" class="callout warning"><%= t("questions_picker.no_questions", scope: "decidim.questions") %></div>

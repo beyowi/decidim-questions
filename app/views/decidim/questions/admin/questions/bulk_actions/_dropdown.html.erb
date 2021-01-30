@@ -1,0 +1,56 @@
+<div id="js-bulk-actions-wrapper">
+  <button
+    id="js-bulk-actions-button"
+    class="button button--nomargin tiny success light dropdown hide"
+    type="button"
+    data-toggle="js-bulk-actions-dropdown">
+    <%= t("decidim.questions.admin.questions.index.actions") %>
+  </button>
+
+  <div
+    id="js-bulk-actions-dropdown"
+    class="dropdown-pane"
+    data-position="bottom"
+    data-alignment="right"
+    data-dropdown="dropdown"
+    data-auto-focus="false"
+    data-events="resize">
+    <ul class="list-reset">
+      <li>
+        <button type="button" data-action="recategorize-questions">
+          <%= t("decidim.questions.admin.questions.index.change_category") %>
+        </button>
+      </li>
+      <li>
+        <button type="button" data-action="scope-change-questions">
+          <%= t("decidim.questions.admin.questions.index.change_scope") %>
+        </button>
+      </li>
+      <li>
+        <button type="button" data-action="merge-questions">
+          <%= t("decidim.questions.admin.questions.index.merge") %>
+        </button>
+      </li>
+      <li>
+        <button type="button" data-action="split-questions">
+          <%= t("decidim.questions.admin.questions.index.split") %>
+        </button>
+      </li>
+      <li>
+        <button type="button" data-action="assign-questions-to-valuator">
+          <%= t("decidim.questions.admin.questions.index.assign_to_valuator") %>
+        </button>
+      </li>
+      <li>
+        <button type="button" data-action="unassign-questions-from-valuator">
+          <%= t("decidim.questions.admin.questions.index.unassign_from_valuator") %>
+        </button>
+      </li>
+      <li>
+        <button type="button" data-action="publish-answers">
+          <%= t("decidim.questions.admin.questions.index.publish_answers") %>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>

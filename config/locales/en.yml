@@ -1,0 +1,899 @@
+---
+en:
+  activemodel:
+    attributes:
+      collaborative_draft:
+        address: Address
+        body: Body
+        category_id: Category
+        decidim_scope_id: Scope
+        has_address: Has address
+        scope_id: Scope
+        state: State
+        title: Title
+        user_group_id: Create collaborative draft as
+      question:
+        address: Address
+        answer: Answer
+        answered_at: Answered at
+        automatic_hashtags: Hashtags automatically added
+        body: Body
+        category_id: Category
+        decidim_scope_id: Scope
+        has_address: Has address
+        scope_id: Scope
+        state: State
+        suggested_hashtags: Suggested hashtags
+        title: Title
+        user_group_id: Create question as
+      question_answer:
+        answer: Answer
+      questions_copy:
+        copy_questions: I understand that this will import all questions from the selected component to the current one and that this action can't be reversed.
+        origin_component_id: Component to copy the questions from
+      questions_import:
+        import_questions: Import questions
+        keep_authors: Keep original authors
+      valuation_assignment:
+        admin_log:
+          valuator_role_id: Valuator name
+    errors:
+      models:
+        participatory_text:
+          attributes:
+            document:
+              invalid_document_type: 'Invalid document type. Accepted formats are: %{valid_mime_types}'
+        question:
+          attributes:
+            attachment:
+              needs_to_be_reattached: Needs to be reattached
+            body:
+              cant_be_equal_to_template: cannot be equal to the template
+              identical: AND title cannot be identical
+            title:
+              identical: AND body cannot be identical
+    models:
+      decidim/questions/accepted_question_event: Question accepted
+      decidim/questions/admin/update_question_category_event: Question category changed
+      decidim/questions/admin/update_question_scope_event: Question scope changed
+      decidim/questions/creation_enabled_event: Question creation enabled
+      decidim/questions/endorsing_enabled_event: Question endorsing enabled
+      decidim/questions/evaluating_question_event: Question is being evaluated
+      decidim/questions/question_mentioned_event: Question mentioned
+      decidim/questions/publish_question_event: Question published
+      decidim/questions/rejected_question_event: Question rejected
+      decidim/questions/voting_enabled_event: Question voting enabled
+  activerecord:
+    models:
+      decidim/questions/collaborative_draft:
+        one: Collaborative draft
+        other: Collaborative drafts
+      decidim/questions/question:
+        one: Question
+        other: Questions
+      decidim/questions/question_note:
+        one: Note
+        other: Notes
+      decidim/questions/question_vote:
+        one: Support
+        other: Supports
+  decidim:
+    admin:
+      filters:
+        questions:
+          category_id_eq:
+            label: Category
+          is_emendation_true:
+            label: Type
+            values:
+              'false': Questions
+              'true': Amendments
+          scope_id_eq:
+            label: Scope
+          state_eq:
+            label: State
+            values:
+              accepted: Accepted
+              evaluating: Evaluating
+              published: Published
+              rejected: Rejected
+              validating: Technical validation
+              withdrawn: Withdrawn
+          state_null:
+            label: State
+            values:
+              'true': Not answered
+          valuator_role_ids_has:
+            label: Assigned to valuator
+        search_placeholder:
+          id_string_or_title_cont: Search %{collection} by ID or title.
+    components:
+      questions:
+        actions:
+          amend: Amend
+          create: Create
+          endorse: Endorse
+          vote: Support
+          withdraw: Withdraw
+        name: Questions
+        settings:
+          global:
+            allow_card_image: Allow card image
+            amendments_enabled: Amendments enabled
+            amendments_enabled_help: If active, configure Amendment features for each step.
+            amendments_wizard_help_text: Amendments Wizard help text
+            announcement: Announcement
+            attachments_allowed: Allow attachments
+            can_accumulate_supports_beyond_threshold: Can accumulate supports beyond threshold
+            collaborative_drafts_enabled: Collaborative drafts enabled
+            comments_enabled: Comments enabled
+            geocoding_enabled: Geocoding enabled
+            minimum_votes_per_user: Minimum supports per user
+            new_question_body_template: New question body template
+            new_question_body_template_help: You can define prefilled text that the new Questions will have
+            new_question_help_text: New question help text
+            official_questions_enabled: Official questions enabled
+            participatory_texts_enabled: Participatory texts enabled
+            participatory_texts_enabled_readonly: Cannot interact with this setting if there are existing questions. Please, create a new `Questions component` if you want to enable this feature or discard all imported questions in the `Participatory Texts` menu if you want to disable it.
+            question_answering_enabled: Question answering enabled
+            question_edit_before_minutes: Questions can be edited by authors before this many minutes passes
+            question_length: Maximum question body length
+            question_limit: Question limit per participant
+            question_wizard_step_1_help_text: Question wizard "Create" step help text
+            question_wizard_step_2_help_text: Question wizard "Compare" step help text
+            question_wizard_step_3_help_text: Question wizard "Complete" step help text
+            question_wizard_step_4_help_text: Question wizard "Publish" step help text
+            resources_permissions_enabled: Actions permissions can be set for each question
+            threshold_per_question: Threshold per question
+            vote_limit: Support limit per participant
+          step:
+            amendment_creation_enabled: Amendment creation enabled
+            amendment_creation_enabled_help: Participant can amend questions.
+            amendment_promotion_enabled: Amendment promotion enabled
+            amendment_promotion_enabled_help: Emandation authors will be able to promote to Question the rejected emendation.
+            amendment_reaction_enabled: Amendment reaction enabled
+            amendment_reaction_enabled_help: Question's authors will be able to accept or reject Participant's emendations.
+            amendments_visibility: Amendments visibility
+            amendments_visibility_choices:
+              all: Amendments are visible to all
+              participants: Amendments are visible only to their authors
+            amendments_visibility_help: If the option "Amendments are visible only to their authors" is selected, participant must be logged in to see the amendments made.
+            announcement: Announcement
+            answers_with_costs: Enable costs on question answers
+            automatic_hashtags: Hashtags added to all questions
+            comments_blocked: Comments blocked
+            creation_enabled: Question creation enabled
+            endorsements_blocked: Endorsements blocked
+            endorsements_enabled: Endorsements enabled
+            question_answering_enabled: Question answering enabled
+            publish_answers_immediately: Publish question answers immediately
+            suggested_hashtags: Hashtags suggested to participants for new questions
+            votes_blocked: Supports blocked
+            votes_enabled: Supports enabled
+            votes_hidden: Supports hidden (if supports are enabled, checking this will hide the number of supports)
+    events:
+      questions:
+        admin:
+          question_note_created:
+            email_intro: Someone has left a note on the question "%{resource_title}". Check it out at <a href="%{admin_question_info_url}">the admin panel</a>
+            email_outro: You have received this notification because you can valuate the question.
+            email_subject: Someone left a note on question %{resource_title}.
+            notification_title: Someone has left a note on the question <a href="%{resource_path}">%{resource_title}</a>. Check it out at <a href="%{admin_question_info_path}">the admin panel</a>
+        collaborative_draft_access_accepted:
+          email_intro: '%{requester_name} has been accepted to access as a contributor of the <a href="%{resource_path}">%{resource_title}</a> collaborative draft.'
+          email_outro: You have received this notification because you are a collaborator of <a href="%{resource_path}">%{resource_title}</a>.
+          email_subject: "%{requester_name} has been accepted to access as a contributor of the %{resource_title}."
+          notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a> has been <strong>accepted to access as a contributor</strong> of the <a href="%{resource_path}">%{resource_title}</a> collaborative draft.
+        collaborative_draft_access_rejected:
+          email_intro: '%{requester_name} has been rejected to access as a contributor of the <a href="%{resource_path}">%{resource_title}</a> collaborative draft.'
+          email_outro: You have received this notification because you are a collaborator of <a href="%{resource_path}">%{resource_title}</a>.
+          email_subject: "%{requester_name} has been rejected to access as a contributor of the %{resource_title} collaborative draft."
+          notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a> has been <strong>rejected to access as a contributor</strong> of the <a href="%{resource_path}">%{resource_title}</a> collaborative draft.
+        collaborative_draft_access_requested:
+          email_intro: '%{requester_name} requested access as a contributor. You can <strong>accept or reject the request</strong> from the <a href="%{resource_path}">%{resource_title}</a> collaborative draft page.'
+          email_outro: You have received this notification because you are a collaborator of <a href="%{resource_path}">%{resource_title}</a>.
+          email_subject: "%{requester_name} requested access to contribute to %{resource_title}."
+          notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a> requested access to contribute to the <a href="%{resource_path}">%{resource_title}</a> collaborative draft. Please <strong>accept or reject the request</strong>.
+        collaborative_draft_access_requester_accepted:
+          email_intro: You have been accepted to access as a contributor of the <a href="%{resource_path}">%{resource_title}</a> collaborative draft.
+          email_outro: You have received this notification because you requested to become a collaborator of <a href="%{resource_path}">%{resource_title}</a>.
+          email_subject: You have been accepted as a contributor of %{resource_title}.
+          notification_title: You have been <strong>accepted to access as a contributor</strong> of the <a href="%{resource_path}">%{resource_title}</a> collaborative draft.
+        collaborative_draft_access_requester_rejected:
+          email_intro: You have been rejected to access as a contributor of the <a href="%{resource_path}">%{resource_title}</a> collaborative draft.
+          email_outro: You have received this notification because you requested to become a collaborator of <a href="%{resource_path}">%{resource_title}</a>.
+          email_subject: You have been rejected as a contributor of %{resource_title}.
+          notification_title: You have been <strong>rejected to access as a contributor</strong> of the <a href="%{resource_path}">%{resource_title}</a> collaborative draft.
+        collaborative_draft_withdrawn:
+          email_intro: <a href="%{author_path}">%{author_name} %{author_nickname}</a> withdrawn the <a href="%{resource_path}">%{resource_title}</a> collaborative draft.
+          email_outro: You have received this notification because you are a collaborator of <a href="%{resource_path}">%{resource_title}</a>.
+          email_subject: "%{author_name} %{author_nickname} withdrawn the %{resource_title} collaborative draft."
+          notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> <strong>withdrawn</strong> the <a href="%{resource_path}">%{resource_title}</a> collaborative draft.
+        creation_enabled:
+          email_intro: 'You can now create new questions in %{participatory_space_title}! Start participating in this page:'
+          email_outro: You have received this notification because you are following %{participatory_space_title}. You can stop receiving notifications following the previous link.
+          email_subject: Questions now available in %{participatory_space_title}
+          notification_title: You can now put forward <a href="%{resource_path}">new questions</a> in <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+        endorsing_enabled:
+          email_intro: 'You can endorse questions in %{participatory_space_title}! Start participating in this page:'
+          email_outro: You have received this notification because you are following %{participatory_space_title}. You can stop receiving notifications following the previous link.
+          email_subject: Questions endorsing has started for %{participatory_space_title}
+          notification_title: You can now start <a href="%{resource_path}">endorsing questions</a> in <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+        question_accepted:
+          affected_user:
+            email_intro: 'Your question "%{resource_title}" has been accepted. You can read the answer in this page:'
+            email_outro: You have received this notification because you are an author of "%{resource_title}".
+            email_subject: Your question has been accepted
+            notification_title: Your question <a href="%{resource_path}">%{resource_title}</a> has been accepted.
+          follower:
+            email_intro: 'The question "%{resource_title}" has been accepted. You can read the answer in this page:'
+            email_outro: You have received this notification because you are following "%{resource_title}". You can unfollow it from the previous link.
+            email_subject: A question you're following has been accepted
+            notification_title: The <a href="%{resource_path}">%{resource_title}</a> question has been accepted.
+        question_evaluating:
+          affected_user:
+            email_intro: 'Your question "%{resource_title}" is currently being evaluated. You can check for an answer in this page:'
+            email_outro: You have received this notification because you are an author of "%{resource_title}".
+            email_subject: Your question is being evaluated
+            notification_title: Your question <a href="%{resource_path}">%{resource_title}</a> is being evaluated.
+          follower:
+            email_intro: 'The question "%{resource_title}" is currently being evaluated. You can check for an answer in this page:'
+            email_outro: You have received this notification because you are following "%{resource_title}". You can unfollow it from the previous link.
+            email_subject: A question you're following is being evaluated
+            notification_title: The <a href="%{resource_path}">%{resource_title}</a> question is being evaluated.
+        question_mentioned:
+          email_intro: Your question "%{mentioned_question_title}" has been mentioned <a href="%{resource_url}">in this space</a> in the comments.
+          email_outro: You have received this notification because you are an author of "%{resource_title}".
+          email_subject: Your question "%{mentioned_question_title}" has been mentioned
+          notification_title: Your question "%{mentioned_question_title}" has been mentioned <a href="%{resource_path}">in this space</a> in the comments.
+        question_published:
+          email_intro: '%{author_name} %{author_nickname}, who you are following, has published a new question called "%{resource_title}". Check it out and contribute:'
+          email_outro: You have received this notification because you are following %{author_nickname}. You can stop receiving notifications following the previous link.
+          email_subject: New question "%{resource_title}" by %{author_nickname}
+          notification_title: The <a href="%{resource_path}">%{resource_title}</a> question was published by <a href="%{author_path}">%{author_name} %{author_nickname}</a>.
+        question_published_for_space:
+          email_intro: The question "%{resource_title}" has been added to "%{participatory_space_title}" that you are following.
+          email_outro: You have received this notification because you are following "%{participatory_space_title}". You can stop receiving notifications following the previous link.
+          email_subject: New question "%{resource_title}" added to %{participatory_space_title}
+          notification_title: The question <a href="%{resource_path}">%{resource_title}</a> has been added to %{participatory_space_title}
+        question_rejected:
+          affected_user:
+            email_intro: 'Your question "%{resource_title}" has been rejected. You can read the answer in this page:'
+            email_outro: You have received this notification because you are an author of "%{resource_title}".
+            email_subject: Your question been rejected
+            notification_title: Your question <a href="%{resource_path}">%{resource_title}</a> has been rejected.
+          follower:
+            email_intro: 'The question "%{resource_title}" has been rejected. You can read the answer in this page:'
+            email_outro: You have received this notification because you are following "%{resource_title}". You can unfollow it from the previous link.
+            email_subject: A question you're following has been rejected
+            notification_title: The <a href="%{resource_path}">%{resource_title}</a> question has been rejected.
+        question_update_category:
+          email_intro: 'An admin has updated the category of your question "%{resource_title}", check it out in this page:'
+          email_outro: You have received this notification because you are the author of the question.
+          email_subject: The %{resource_title} question category has been updated
+          notification_title: The <a href="%{resource_path}">%{resource_title}</a> question category has been updated by an admin.
+        question_update_scope:
+          email_intro: 'An admin has updated the scope of your question "%{resource_title}", check it out in this page:'
+          email_outro: You have received this notification because you are the author of the question.
+          email_subject: The %{resource_title} question scope has been updated
+          notification_title: The <a href="%{resource_path}">%{resource_title}</a> question scope has been updated by an admin.
+        voting_enabled:
+          email_intro: 'You can support questions in %{participatory_space_title}! Start participating in this page:'
+          email_outro: You have received this notification because you are following %{participatory_space_title}. You can stop receiving notifications following the previous link.
+          email_subject: Question support has started for %{participatory_space_title}
+          notification_title: You can now start <a href="%{resource_path}">supporting questions</a> in <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+    gamification:
+      badges:
+        accepted_questions:
+          conditions:
+          - Choose the participation space of your interest with submission for questions enabled
+          - Try to make questions that can be carried out. This way they are more likely to be accepted.
+          description: This badge is granted when you actively participate with new questions and these are accepted.
+          description_another: This participant had %{score} accepted questions.
+          description_own: You got %{score} questions accepted.
+          name: Accepted questions
+          next_level_in: Get %{score} more questions accepted to reach the next level!
+          unearned_another: This participant has not yet had any accepted questions.
+          unearned_own: You got no questions accepted yet.
+        question_votes:
+          conditions:
+          - Browse and spend some time reading other people's questions
+          - Give support to the questions you like or find interesting
+          description: This badge is granted when you support other people's questions.
+          description_another: This participant has given support to %{score} questions.
+          description_own: You have given support to %{score} questions.
+          name: Question supports
+          next_level_in: Give support to %{score} more questions to reach the next level!
+          unearned_another: This participant hasn't given support to any questions yet.
+          unearned_own: You have given support to no questions yet.
+        questions:
+          conditions:
+          - Choose the participation space of your interest with submission for questions enabled
+          - Create a new question
+          description: This badge is granted when you actively participate with new questions.
+          description_another: This participant has created %{score} questions.
+          description_own: You have created %{score} questions.
+          name: Questions
+          next_level_in: Create %{score} more questions to reach the next level!
+          unearned_another: This participant hasn't created any questions yet.
+          unearned_own: You have created no questions yet.
+    metrics:
+      accepted_questions:
+        description: Number of questions accepted
+        object: questions
+        title: Accepted questions
+      endorsements:
+        description: Number of endorsements to questions
+        object: endorsements
+        title: Endorsements
+      questions:
+        description: Number of questions
+        object: questions
+        title: Questions
+      votes:
+        description: Number of supports to questions
+        object: supports
+        title: Supports
+    participatory_processes:
+      participatory_process_groups:
+        highlighted_questions:
+          questions: Questions
+    participatory_spaces:
+      highlighted_questions:
+        see_all: See all questions (%{count})
+    questions:
+      actions:
+        answer_question: Answer question
+        edit_question: Edit question
+        import: Import from another component
+        new: New question
+        participatory_texts: Participatory texts
+        show: Show question
+        title: Actions
+      admin:
+        actions:
+          preview: Preview
+        exports:
+          comments: Comments
+          questions: Questions
+        models:
+          question:
+            name: Question
+        participatory_texts:
+          bulk-actions:
+            are_you_sure: Are you sure to discard the whole participatory text draft?
+            discard_all: Discard all
+            import_doc: Import document
+          discard:
+            success: All participatory text drafts have been discarded.
+          import:
+            invalid: The form is invalid!
+            invalid_file: The file contains some error, please try to edit the content of the file and re-upload it again.
+            success: Congratulations, the following sections have been converted to questions. Now you can review and adjust them before publishing.
+          index:
+            info_1: The following sections have been converted to questions. Now you can review and adjust them before publishing.
+            publish_document: Publish document
+            save_draft: Save draft
+            title: Preview participatory text
+          new_import:
+            accepted_mime_types:
+              md: Markdown
+              odt: Odt
+            bottom_hint: "(You will be able to preview and sort document sections)"
+            document_legend: 'Add a document lesser than 2MB, each section until 3 levels deep will be parsed into Questions. Suported formats are: %{valid_mime_types}'
+            title: Add document
+            upload_document: Upload document
+          publish:
+            invalid: Could not publish questions
+            success: All questions have been published
+          sections:
+            article: "<em>Article</em>"
+            section: "<em>Section:</em> <strong>%{title}</strong>"
+            sub-section: "<em>Subsection:</em> %{title}"
+          update:
+            success: Participatory text successfully updated.
+        question_answers:
+          form:
+            accepted: Accepted
+            answer_question: Answer
+            evaluating: Evaluating
+            rejected: Rejected
+            title: Answer for question %{title}
+        question_notes:
+          create:
+            error: There was a problem creating this question note
+            success: Question note successfully created
+          form:
+            note: Note
+            submit: Submit
+          leave_your_note: Leave your note
+          title: Private notes
+        questions:
+          answer:
+            invalid: There's been a problem answering this question
+            success: Question successfully answered
+          create:
+            invalid: There's been a problem creating this question
+            success: Question successfully created
+          edit:
+            title: Update question
+            update: Update
+          form:
+            attachment_legend: "(Optional) Add an attachment"
+            created_in_meeting: This question comes from a meeting
+            select_a_category: Select a category
+            select_a_meeting: Select a meeting
+          index:
+            actions: Actions
+            assign_to_valuator: Assign to valuator
+            assign_to_valuator_button: Assign
+            cancel: Cancel
+            change_category: Change category
+            change_scope: Change scope
+            merge: Merge into a new one
+            merge_button: Merge
+            publish: Publish
+            publish_answers: Publish answers
+            select_component: Select a component
+            selected: selected
+            split: Split questions
+            split_button: Split
+            title: Questions
+            unassign_from_valuator: Unassign from valuator
+            unassign_from_valuator_button: Unassign
+            update: Update
+            update_scope_button: Update Scope
+          new:
+            create: Create
+            title: Create question
+          publish_answers:
+            number_of_questions: Answers for %{number} questions will be published.
+            select_a_question: Please select a question
+          show:
+            amendments_count: Amendments count
+            assigned_valuators: Assigned valuators
+            authors: Authors
+            body: Body
+            comments_count: Comments count
+            comments_negative_count: Against
+            comments_neutral_count: Neutral
+            comments_positive_count: Favor
+            created_at: Creation date
+            documents: Documents
+            endorsements_count: Endorsements count
+            endorsements_ranking: Ranking by endorsements
+            endorsers: Endorsers
+            link: Link
+            n_more_endorsers:
+              one: and 1 more
+              other: and %{count} more
+            photos: Photos
+            questions: Questions
+            ranking: "%{ranking} of %{total}"
+            related_meetings: Related meetings
+            remove_assignment: Remove assignment
+            remove_assignment_confirmation: Are you sure you want to remove the valuator from this question?
+            valuators: Valuators
+            votes_count: Supports count
+            votes_ranking: Ranking by supports
+          update_category:
+            invalid: 'These questions already had the %{subject_name} category: %{questions}.'
+            select_a_category: Please select a category
+            select_a_question: Please select a question
+            success: 'Questions successfully updated to the %{subject_name} category: %{questions}.'
+          update_scope:
+            invalid: 'These questions already had the %{subject_name} scope: %{questions}.'
+            select_a_question: Please select a question
+            select_a_scope: Please select a scope
+            success: 'Questions successfully updated to the %{subject_name} scope: %{questions}.'
+        questions_imports:
+          create:
+            invalid: There was a problem importing the questions
+            success: "%{number} questions successfully imported"
+          new:
+            create: Import questions
+            no_components: There are no other question components in this participatory space to import the questions from.
+            select_component: Please select a component
+            select_states: Check the status of the questions to import
+        questions_merges:
+          create:
+            invalid: There was a problem merging the selected questions.
+            success: Successfully merged the questions into a new one.
+        questions_splits:
+          create:
+            invalid: There was a problem spliting the selected questions.
+            success: Successfully splitted the questions into new ones.
+        valuation_assignments:
+          create:
+            invalid: There was an error assigning questions to a valuator
+            success: Questions assigned to a valuator successfully
+          delete:
+            invalid: There was an error unassigning questions from a valuator
+            success: Valuator unassigned from questions successfully
+      admin_log:
+        question:
+          answer: "%{user_name} answered the %{resource_name} question on the %{space_name} space"
+          create: "%{user_name} created the %{resource_name} question on the %{space_name} space as an official question"
+          publish_answer: "%{user_name} published the answer to %{resource_name} question on the %{space_name} space"
+          update: "%{user_name} updated the %{resource_name} official question on the %{space_name} space"
+        question_note:
+          create: "%{user_name} left a private note on the %{resource_name} question on the %{space_name} space"
+        valuation_assignment:
+          create: "%{user_name} assigned the %{resource_name} question to a valuator"
+          delete: "%{user_name} unassigned a valuator from the %{question_title} question"
+      answers:
+        accepted: Accepted
+        evaluating: Evaluating
+        not_answered: Not answered
+        rejected: Rejected
+        withdrawn: Withdrawn
+      application_helper:
+        filter_category_values:
+          all: All
+        filter_origin_values:
+          all: All
+          citizens: Citizens
+          meetings: Meetings
+          official: Official
+          user_groups: Groups
+        filter_scope_values:
+          all: All
+        filter_state_values:
+          accepted: Accepted
+          all: All
+          evaluating: Evaluating
+          not_answered: Not answered
+          rejected: Rejected
+        filter_type_values:
+          all: All
+          amendments: Amendments
+          questions: Questions
+      collaborative_drafts:
+        collaborative_draft:
+          publish:
+            error: There was a problem publishing the collaborative draft.
+            irreversible_action_modal:
+              body: After publishing the draft as a question, the draft won't be editable anymore. The question won't accept new authors or contributions.
+              cancel: Cancel
+              ok: Publish as a Question
+              title: The following action is irreversible
+            success: Collaborative draft published successfully as a question.
+          view_collaborative_draft: View Collaborative Draft
+          withdraw:
+            error: There was a problem closing the collaborative draft.
+            irreversible_action_modal:
+              body: After closing the draft, the draft won't be editable anymore. The draft won't accept new authors or contributions.
+              cancel: Cancel
+              ok: Withdraw the collaborative draft
+              title: The following action is irreversible
+            success: Collaborative draft withdrawn successfully.
+        compare:
+          mine_is_different: My collaborative draft is different
+          no_similars_found: Well done! No similar collaborative drafts found
+          title: Similar collaborative drafts
+        complete:
+          send: Send
+          title: Complete your collaborative draft
+        count:
+          drafts_count:
+            one: "%{count} collaborative draft"
+            other: "%{count} collaborative drafts"
+        create:
+          error: There was a problem creating this collaborative drafts
+          success: Collaborative draft successfully created.
+        edit:
+          attachment_legend: "(Optional) Add an attachment"
+          back: Back
+          select_a_category: Please select a category
+          send: Send
+          title: Edit collaborative draft
+        filters:
+          all: All
+          amendment: Amendments
+          category: Category
+          open: Open
+          published: Published
+          related_to: Related to
+          scope: Scope
+          search: Search
+          state: Status
+          withdrawn: Withdrawn
+        filters_small_view:
+          close_modal: Close modal
+          filter: Filter
+          filter_by: Filter by
+          unfold: Unfold
+        new:
+          send: Continue
+          title: Create Your collaborative draft
+        new_collaborative_draft_button:
+          new_collaborative_draft: New collaborative draft
+        orders:
+          label: 'Order drafts by:'
+          most_contributed: Most contributed
+          random: Random
+          recent: Recent
+        requests:
+          accepted_request:
+            error: Could not be accepted as a collaborator, please try again later.
+            success: "@%{user} has been accepted as a collaborator successfully"
+          access_requested:
+            error: Your request could not be completed, please try again later.
+            success: Your request to collaborate has been successfully sent
+          collaboration_requests:
+            accept_request: Accept
+            reject_request: Reject
+            title: Collaboration requests
+          rejected_request:
+            error: Could not be rejected as a collaborator, please try again later.
+            success: "@%{user} has been successfully rejected as a collaborator"
+        show:
+          back: Back
+          edit: Edit collaborative draft
+          final_question: final question
+          final_question_help_text: This draft is finished. Check out the final question
+          hidden_authors_count:
+            one: and %{count} more person
+            other: and %{count} more people
+          info-message: This is a <strong>collaborative draft</strong> for a question. This means that you can help their authors to shape the question using the comment section below or improve it directly by requesting access to edit it. Once the authors grant you access, you'll be able to make changes to this draft.
+          publish: Publish
+          publish_info: Publish this version of the draft or
+          published_question: published question
+          request_access: Request access
+          requested_access: Access requested
+          version_history: see version history for this question
+          withdraw: withdraw the draft
+        states:
+          open: Open
+          published: Published
+          withdrawn: Withdrawn
+        update:
+          error: There was a problem saving the collaborative draft.
+          success: Collaborative draft successfully updated.
+          title: Edit collaborative draft
+        wizard_aside:
+          back: Back
+          back_from_collaborative_draft: Back to collaborative drafts
+          back_from_step_1: Back to collaborative drafts
+          back_from_step_2: Back to collaborative drafts
+          back_from_step_3: Back to compare collaborative drafts
+          back_from_step_4: Back to edit draft
+          info: You are creating a <strong>collaborative draft</strong>.
+        wizard_steps:
+          current_step: Current step
+          see_steps: see steps
+          step_1: Create your collaborative draft
+          step_2: Compare with collaborative drafts
+          step_3: Complete your collaborative draft
+          step_of: Step %{current_step_num} of %{total_steps}
+          title: Collaborative draft creation steps
+      create:
+        error: There was a problem saving the question.
+        success: Question successfully created. Saved as a Draft.
+      destroy_draft:
+        error: There was a problem deleting the collaborative draft.
+        success: Question draft was successfully deleted.
+      last_activity:
+        new_question_at_html: "<span>New question at %{link}</span>"
+      models:
+        collaborative_draft:
+          fields:
+            authors: Authors
+            comments: Comments
+            contributions: Contributions
+        question:
+          fields:
+            category: Category
+            comments: Comments
+            id: ID
+            notes: Notes
+            official_question: Official question
+            published_answer: Published answer
+            published_at: Published at
+            scope: Scope
+            state: Status
+            title: Title
+            valuator: Valuator
+            valuators: Valuators
+            votes: Votes
+      new:
+        limit_reached: You can't create new questions since you've exceeded the limit.
+      participatory_text_question:
+        alternative_title: There are no participatory texts at the moment
+        buttons:
+          amend: Amend
+          comment: Comment
+          comments: Comments
+      question_votes:
+        create:
+          error: There was a problem supporting the question.
+      questions:
+        compare:
+          continue: Continue
+          no_similars_found: Well done! No similar questions found
+          title: Similar Questions
+        complete:
+          send: Send
+          title: Complete your question
+        count:
+          questions_count:
+            one: "%{count} question"
+            other: "%{count} questions"
+        edit:
+          attachment_legend: "(Optional) Add an attachment"
+          back: Back
+          select_a_category: Please select a category
+          send: Send
+          title: Edit question
+        edit_draft:
+          discard: Discard this draft
+          discard_confirmation: Are you sure you want to discard this question draft?
+          send: Preview
+          title: Edit Question Draft
+        filters:
+          activity: My activity
+          all: All
+          amendment_type: Type
+          category: Category
+          my_questions: My questions
+          origin: Origin
+          related_to: Related to
+          scope: Scope
+          search: Search
+          state: Status
+          type: Type
+          voted: Supported
+        filters_small_view:
+          close_modal: Close modal
+          filter: Filter
+          filter_by: Filter by
+          unfold: Unfold
+        index:
+          collaborative_drafts_list: Access collaborative drafts
+          new_question: New question
+          see_all_withdrawn: See all withdrawn questions
+          view_question: View question
+        linked_questions:
+          question_votes:
+            one: support
+            other: supports
+        new:
+          send: Continue
+          title: Create Your Question
+        orders:
+          label: 'Order questions by:'
+          most_commented: Most commented
+          most_endorsed: Most endorsed
+          most_followed: Most followed
+          most_voted: Most supported
+          random: Random
+          recent: Recent
+          with_more_authors: With more authors
+        participatory_texts:
+          index:
+            document_index: Document index
+          view_index:
+            see_index: See index
+        preview:
+          modify: Modify the question
+          question_edit_before_minutes:
+            one: You will be able to edit this question during the first minute after the question is published. Once this time window passes, you will not be able to edit the question.
+            other: You will be able to edit this question during the first %{count} minutes after the question is published. Once this time window passes, you will not be able to edit the question.
+          publish: Publish
+          title: Publish your question
+        question:
+          creation_date: 'Creation: %{date}'
+          view_question: View question
+        questions:
+          empty: There is no question yet
+          empty_filters: There isn't any question with this criteria
+        show:
+          answer: Answer
+          back_to: Back to
+          back_to_list: Back to list
+          changes_at_title: Amendment to "%{title}"
+          comments: Comments
+          edit_question: Edit question
+          endorsements_list: List of Endorsements
+          estimated_cost: Estimated cost
+          hidden_endorsers_count:
+            one: and %{count} more person
+            other: and %{count} more people
+          link_to_collaborative_draft_help_text: This question is the result of a collaborative draft. Review the history
+          link_to_collaborative_draft_text: See the collaborative draft
+          link_to_promoted_emendation_help_text: This question is a promoted emendation
+          link_to_promoted_emendation_text: See the rejected emendation.
+          link_to_question_from_emendation_help_text: This is a rejected emendation
+          link_to_question_from_emendation_text: See the Question
+          question_accepted_reason: 'This question has been accepted because:'
+          question_in_evaluation_reason: This question is being evaluated
+          question_rejected_reason: 'This question has been rejected because:'
+          read_less: Read less
+          read_more: Read more
+          report: Report
+          withdraw_btn_hint: You can withdraw your question if you change your mind, as long as you have not received any support. The question is not deleted, it will appear in the list of withdrawn questions.
+          withdraw_confirmation_html: Are you sure you want to withdraw this question?<br><br><strong>This action cannot be cancelled!</strong>
+          withdraw_question: Withdraw question
+        tags:
+          changed_from: "(changed from <u>%{previous_name}</u> by an administrator)"
+        update:
+          title: Update question
+        vote_button:
+          already_voted: Already supported
+          already_voted_hover: Withdraw support
+          maximum_votes_reached: Support limit reached
+          no_votes_remaining: No supports remaining
+          vote: Support
+          votes_blocked: Supports disabled
+        votes_count:
+          count:
+            one: Support
+            other: Supports
+          most_popular_question: Most popular question
+          need_more_votes: Need more supports
+        voting_rules:
+          can_accumulate_supports_beyond_threshold:
+            description: Each question can accumulate more than %{limit} supports
+          minimum_votes_per_user:
+            description: You must distribute a minimum of %{votes} supports among different questions.
+            given_enough_votes: You've given enough supports.
+            supports_remaining: You have to support %{remaining_votes} more questions for your supports to be taken into account.
+          question_limit:
+            description: You can create up to %{limit} questions.
+          threshold_per_question:
+            description: In order to be validated questions need to reach %{limit} supports
+          title: 'Supports are subject to the following rules:'
+          vote_limit:
+            description: You can support up to %{limit} questions.
+            left: Remaining
+            votes: Supports
+        wizard_aside:
+          back: Back
+          back_from_step_1: Back to questions
+          back_from_step_2: Back to questions
+          back_from_step_3: Back to compare questions
+          back_from_step_4: Back to edit draft
+          info: You are creating a <strong>question</strong>.
+        wizard_steps:
+          current_step: Current step
+          see_steps: see steps
+          step_1: Create your question
+          step_2: Compare
+          step_3: Complete
+          step_4: Publish your question
+          step_of: Step %{current_step_num} of %{total_steps}
+          title: Question creation steps
+      questions_picker:
+        choose_questions: Choose questions
+        close: Close
+        more_questions: There are %{number} more questions. Refine your search to locate them.
+        no_questions: No questions match your search criteria or there isn't any questions.
+      publish:
+        error: There was a problem publishing the question.
+        success: Question successfully published.
+      publish_answers:
+        success: Questions answers successfully published.
+      update:
+        error: There was a problem saving the question.
+        success: Question successfully updated.
+      update_draft:
+        error: There was a problem saving the collaborative draft.
+        success: Question draft successfully updated.
+      versions:
+        collaborative_drafts:
+          back_to_resource: Go back to collaborative draft
+        index:
+          title: Versions
+        questions:
+          back_to_resource: Go back to question
+      withdraw:
+        errors:
+          has_supports: This question can not be withdrawn because it already has supports.
+    resource_links:
+      copied_from_component:
+        question_question: Related questions
+      included_projects:
+        project_result: 'Results appearing in this project:'
+      included_questions:
+        question_project: 'Question appearing in these projects:'
+        question_result: 'Question appearing in these results:'

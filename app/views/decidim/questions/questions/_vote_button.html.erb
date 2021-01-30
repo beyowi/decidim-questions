@@ -1,0 +1,57 @@
+<% if question.rejected? || question.withdrawn? %>
+  <div></div>
+<% else %>
+  <% if component_settings.participatory_texts_enabled? && from_questions_list %>
+    <%= render partial: "decidim/questions/questions/participatory_texts/question_vote_button", locals: { question: question, from_questions_list: true } %>
+  <% else %>
+    <div id="question-<%= question.id %>-vote-button" class="button--vote-button">
+      <% if !current_user %>
+        <% if current_settings.votes_blocked? %>
+          <%= action_authorized_button_to :vote, t("decidim.questions.questions.vote_button.votes_blocked"), question_question_vote_path(question_id: question, from_questions_list: from_questions_list), resource: question, class: "button #{vote_button_classes(from_questions_list)} disabled", disabled: true %>
+        <% else %>
+          <%= action_authorized_button_to :vote, question_question_vote_path(question_id: question, from_questions_list: from_questions_list), resource: question, class: "button #{vote_button_classes(from_questions_list)}", data: { disable: true, "redirect-url": question_path(question) } do %>
+            <%= t("decidim.questions.questions.vote_button.vote") %>
+            <span class="show-for-sr"><%= decidim_html_escape(present(question).title) %></span>
+          <% end %>
+        <% end %>
+      <% else %>
+        <% if @voted_questions ? @voted_questions.include?(question.id) : question.voted_by?(current_user) %>
+          <%= action_authorized_button_to(
+            :vote,
+            question_question_vote_path(question_id: question, from_questions_list: from_questions_list),
+            resource: question,
+            method: :delete,
+            remote: true,
+            data: {
+              disable: true,
+              original: t("decidim.questions.questions.vote_button.already_voted"),
+              replace: t("decidim.questions.questions.vote_button.already_voted_hover"),
+              "redirect-url": question_path(question)
+            },
+            class: "button #{vote_button_classes(from_questions_list)} active light",
+            id: "vote_button-#{question.id}"
+          ) do %>
+            <%= icon("check", class: "icon--small") %>
+            <%= t("decidim.questions.questions.vote_button.already_voted") %>
+            <span class="show-for-sr"><%= decidim_html_escape(present(question).title) %></span>
+          <% end %>
+        <% else %>
+          <% if question.maximum_votes_reached? && !question.can_accumulate_supports_beyond_threshold && current_component.participatory_space.can_participate?(current_user) %>
+            <%= content_tag :button, t("decidim.questions.questions.vote_button.maximum_votes_reached"), class: "button #{vote_button_classes(from_questions_list)} disabled", disabled: true %>
+          <% else %>
+            <% if vote_limit_enabled? && remaining_votes_count_for(current_user) == 0 %>
+              <%= content_tag :button, t("decidim.questions.questions.vote_button.no_votes_remaining"), class: "button #{vote_button_classes(from_questions_list)}", disabled: true %>
+            <% elsif current_settings.votes_blocked? || !current_component.participatory_space.can_participate?(current_user) %>
+              <%= content_tag :button, t("decidim.questions.questions.vote_button.votes_blocked"), class: "button #{vote_button_classes(from_questions_list)} disabled", disabled: true %>
+            <% else %>
+              <%= action_authorized_button_to :vote, question_question_vote_path(question_id: question, from_questions_list: from_questions_list), resource: question, remote: true, data: { disable: true, "redirect-url": question_path(question) }, class: "button #{vote_button_classes(from_questions_list)}" do %>
+                <%= t("decidim.questions.questions.vote_button.vote") %>
+                <span class="show-for-sr"><%= decidim_html_escape(present(question).title) %></span>
+              <% end %>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
