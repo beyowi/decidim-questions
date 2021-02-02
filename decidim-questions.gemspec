@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.summary = "Decidim questions module"
   s.description = "A questions component for decidim's participatory spaces."
 
-  s.files = Dir["{app,config,lib}/**/*", "LICENSE-AGPLv3.txt", "Rakefile", "README.md"]
+  s.files = Dir["{app,config,db,lib}/**/*", "LICENSE-AGPLv3.txt", "Rakefile", "README.md"]
 
   s.add_dependency "acts_as_list", "~> 0.9"
   s.add_dependency "cells-erb", "~> 0.1.0"
