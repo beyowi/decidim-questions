@@ -338,6 +338,10 @@ en:
       participatory_process_groups:
         highlighted_questions:
           questions: Questions
+      statistics:
+        questions_count:
+          one: "%{count} question"
+          other: "%{count} questions"
     participatory_spaces:
       highlighted_questions:
         see_all: See all questions (%{count})
