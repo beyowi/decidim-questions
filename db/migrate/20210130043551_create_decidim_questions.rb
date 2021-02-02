@@ -1,4 +1,4 @@
-class CreateDecidimquestions < ActiveRecord::Migration[5.2]
+class CreateDecidimQuestions < ActiveRecord::Migration[5.2]
   def change
     create_table "decidim_questions_collaborative_draft_collaborator_requests", force: :cascade do |t|
       t.bigint "decidim_questions_collaborative_draft_id", null: false
@@ -6,7 +6,7 @@ class CreateDecidimquestions < ActiveRecord::Migration[5.2]
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
       t.index ["decidim_questions_collaborative_draft_id"], name: "index_collab_requests_on_decidim_questions_collab_draft_id"
-      t.index ["decidim_user_id"], name: "index_collab_requests_on_decidim_user_id"
+      t.index ["decidim_user_id"], name: "index_collab_requests_for_decidim_questions_on_decidim_user_id"
     end
 
     create_table "decidim_questions_collaborative_drafts", force: :cascade do |t|
@@ -40,7 +40,7 @@ class CreateDecidimquestions < ActiveRecord::Migration[5.2]
       t.bigint "decidim_component_id", null: false
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
-      t.index ["decidim_component_id"], name: "idx_participatory_texts_on_decidim_component_id"
+      t.index ["decidim_component_id"], name: "idx_participatory_questions_on_decidim_component_id"
     end
 
     create_table "decidim_questions_question_endorsements", force: :cascade do |t|
