@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.authors = ["cedrtang"]
   s.email = ["cedric@beyowi.com"]
   s.license = "AGPL-3.0"
-  s.homepage = "https://github.com/decidim/decidim-module-questions"
+  s.homepage = "https://github.com/beyowi/decidim-questions"
   s.required_ruby_version = ">= 2.5"
 
   s.name = "decidim-questions"

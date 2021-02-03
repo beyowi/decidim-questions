@@ -84,7 +84,8 @@ describe "Edit collaborative_drafts", type: :system do
           click_button "Send"
         end
 
-        expect(page).to have_content("at least 15 characters", count: 2)
+        expect(page).to have_content("at least 15 characters", count: 1)
+        expect(page).to have_content("is too short (under 15 characters)", count: 1)
 
         within "form.edit_collaborative_draft" do
           fill_in :collaborative_draft_body, with: "WE DO NOT WANT TO SHOUT IN THE QUESTION BODY TEXT!"
