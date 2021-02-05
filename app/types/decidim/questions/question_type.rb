@@ -3,7 +3,7 @@
 module Decidim
   module Questions
     QuestionType = GraphQL::ObjectType.define do
-      name "Question"
+      name "QuestionsQuestion"
       description "A question"
 
       interfaces [
