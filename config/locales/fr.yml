@@ -338,9 +338,7 @@ fr:
         highlighted_questions:
           questions: Questions
       statistics:
-        questions_count:
-          one: "%{count} question"
-          other: "%{count} questions"
+        questions_count: Questions
     participatory_spaces:
       highlighted_questions:
         see_all: Tout voir (%{count})
