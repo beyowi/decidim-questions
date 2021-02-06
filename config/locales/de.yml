@@ -24,14 +24,14 @@ de:
         state: Zustand
         suggested_hashtags: Vorgeschlagene Hashtags
         title: Titel
-        user_group_id: Vorschlag erstellen als
+        user_group_id: Frage erstellen als
       question_answer:
         answer: Antworten
       questions_copy:
-        copy_questions: Ich verstehe, dass dies alle Vorschläge von der ausgewählten Komponente in die aktuelle Komponente importiert und dass diese Aktion nicht rückgängig gemacht werden kann.
-        origin_component_id: Komponente zum Kopieren der Vorschläge aus
+        copy_questions: Ich verstehe, dass dies alle Fragen von der ausgewählten Komponente in die aktuelle Komponente importiert und dass diese Aktion nicht rückgängig gemacht werden kann.
+        origin_component_id: Komponente zum Kopieren der Fragen aus
       questions_import:
-        import_questions: Vorschläge importieren
+        import_questions: Fragen importieren
         keep_authors: Behalten Sie die ursprünglichen Autoren
       valuation_assignment:
         admin_log:
@@ -52,24 +52,24 @@ de:
             title:
               identical: Der UND-Körper kann nicht identisch sein
     models:
-      decidim/questions/accepted_question_event: Vorschlag angenommen
-      decidim/questions/admin/update_question_category_event: Vorschlagskategorie geändert
-      decidim/questions/admin/update_question_scope_event: Vorschlagsumfang geändert
-      decidim/questions/creation_enabled_event: Vorschlagserstellung aktiviert
-      decidim/questions/endorsing_enabled_event: Vorschlagsunterstützung aktiviert
-      decidim/questions/evaluating_question_event: Der Vorschlag wird geprüft
-      decidim/questions/question_mentioned_event: Vorschlag erwähnt
-      decidim/questions/publish_question_event: Vorschlag veröffentlicht
-      decidim/questions/rejected_question_event: Vorschlag abgelehnt
-      decidim/questions/voting_enabled_event: Vorschlagsabstimmung aktiviert
+      decidim/questions/accepted_question_event: Frage angenommen
+      decidim/questions/admin/update_question_category_event: Frageskategorie geändert
+      decidim/questions/admin/update_question_scope_event: Fragesumfang geändert
+      decidim/questions/creation_enabled_event: Frageserstellung aktiviert
+      decidim/questions/endorsing_enabled_event: Fragesunterstützung aktiviert
+      decidim/questions/evaluating_question_event: Der Frage wird geprüft
+      decidim/questions/question_mentioned_event: Frage erwähnt
+      decidim/questions/publish_question_event: Frage veröffentlicht
+      decidim/questions/rejected_question_event: Frage abgelehnt
+      decidim/questions/voting_enabled_event: Fragesabstimmung aktiviert
   activerecord:
     models:
       decidim/questions/collaborative_draft:
         one: Gemeinsamer Entwurf
         other: Gemeinsame Entwürfe
       decidim/questions/question:
-        one: Vorschlag
-        other: Vorschläge
+        one: Frage
+        other: Fragen
       decidim/questions/question_note:
         one: Anmerkung
         other: Anmerkungen
@@ -87,12 +87,12 @@ de:
     components:
       questions:
         actions:
-          amend: Änderungsvorschlag
+          amend: Änderungsfrage
           create: Erstellen
           endorse: Unterstützung
           vote: Abstimmung
           withdraw: Zurückziehen
-        name: Vorschläge
+        name: Fragen
         settings:
           global:
             allow_card_image: Kartenbild zulassen
@@ -106,45 +106,45 @@ de:
             comments_enabled: Kommentare aktiviert
             geocoding_enabled: Geocoding aktiviert
             minimum_votes_per_user: Mindeststimmen pro Nutzer
-            new_question_body_template: Textvorlage für neuen Vorschlag
-            new_question_body_template_help: Sie können den vorgefüllten Text der neuen Vorschläge bestimmen
-            new_question_help_text: Hilfetext für neue Vorschläge
-            official_questions_enabled: Offizielle Vorschläge aktiviert
+            new_question_body_template: Textvorlage für neuen Frage
+            new_question_body_template_help: Sie können den vorgefüllten Text der neuen Fragen bestimmen
+            new_question_help_text: Hilfetext für neue Fragen
+            official_questions_enabled: Offizielle Fragen aktiviert
             participatory_texts_enabled: Partizipative Texte aktiviert
-            participatory_texts_enabled_readonly: Die Interaktion mit dieser Einstellung ist nicht möglich, wenn Vorschläge bestehen. Bitte erstellen Sie eine neue „Vorschlagskomponente“, wenn Sie diese Funktion aktivieren möchten, oder verwerfen Sie alle importierten Vorschläge im Menü „Beteiligungstexte“, wenn Sie diese Funktion deaktivieren möchten.
-            question_answering_enabled: Vorschlagsantworten aktiviert
-            question_edit_before_minutes: Vorschläge können von Autoren innerhalb dieser Zeit bearbeitet werden
+            participatory_texts_enabled_readonly: Die Interaktion mit dieser Einstellung ist nicht möglich, wenn Fragen bestehen. Bitte erstellen Sie eine neue „Frageskomponente“, wenn Sie diese Funktion aktivieren möchten, oder verwerfen Sie alle importierten Fragen im Menü „Beteiligungstexte“, wenn Sie diese Funktion deaktivieren möchten.
+            question_answering_enabled: Fragesantworten aktiviert
+            question_edit_before_minutes: Fragen können von Autoren innerhalb dieser Zeit bearbeitet werden
             question_length: Maximale Länge des Haupttextes
-            question_limit: Vorschlagslimit pro Benutzer
-            question_wizard_step_1_help_text: Hilfetext "Erstellen"-Schritt im Vorschlagsassistenten
-            question_wizard_step_2_help_text: Hilfetext "Vergleichen"-Schritt im Vorschlagsassistenten
-            question_wizard_step_3_help_text: Hilfetext "Fertigstellen"-Schritt im Vorschlagsassistenten
-            question_wizard_step_4_help_text: Hilfetext "Veröffentlichen"-Schritt im Vorschlagsassistenten
-            resources_permissions_enabled: Berechtigungen können für jeden Vorschlag festgelegt werden
-            threshold_per_question: Schwellenwert pro Vorschlag
+            question_limit: Frageslimit pro Benutzer
+            question_wizard_step_1_help_text: Hilfetext "Erstellen"-Schritt im Fragesassistenten
+            question_wizard_step_2_help_text: Hilfetext "Vergleichen"-Schritt im Fragesassistenten
+            question_wizard_step_3_help_text: Hilfetext "Fertigstellen"-Schritt im Fragesassistenten
+            question_wizard_step_4_help_text: Hilfetext "Veröffentlichen"-Schritt im Fragesassistenten
+            resources_permissions_enabled: Berechtigungen können für jeden Frage festgelegt werden
+            threshold_per_question: Schwellenwert pro Frage
             vote_limit: Unterstützungslimit pro Benutzer
           step:
             amendment_creation_enabled: Ergänzungserstellung aktiviert
-            amendment_creation_enabled_help: Teilnehmer kann Vorschläge ergänzen.
+            amendment_creation_enabled_help: Teilnehmer kann Fragen ergänzen.
             amendment_promotion_enabled: Hervorheben von Ergänzungen aktiviert
-            amendment_promotion_enabled_help: Berichtigungsautoren können die abgelehnten Berichtigungen im Vorschlag hervorheben.
+            amendment_promotion_enabled_help: Berichtigungsautoren können die abgelehnten Berichtigungen im Frage hervorheben.
             amendment_reaction_enabled: Reaktionen auf Ergänzungen aktiviert
-            amendment_reaction_enabled_help: Vorschlagsautoren können die Berichtigungen von Teilnehmern akzeptieren oder ablehnen.
+            amendment_reaction_enabled_help: Fragesautoren können die Berichtigungen von Teilnehmern akzeptieren oder ablehnen.
             amendments_visibility: Sichtbarkeit der Ergänzungen
             amendments_visibility_choices:
               all: Ergänzungen sind für alle sichtbar
               participants: Ergänzungen sind nur für ihre Autoren sichtbar
             amendments_visibility_help: Wenn die Option „Ergänzungen sind nur für ihre Autoren sichtbar“ ausgewählt ist, müssen Teilnehmer eingeloggt sein, um die vorgenommenen Ergänzungen zu sehen.
             announcement: Ankündigung
-            answers_with_costs: Kosten für Vorschlagsantworten aktivieren
+            answers_with_costs: Kosten für Fragesantworten aktivieren
             automatic_hashtags: Hashtags wurden allen Vorschlägen hinzugefügt
             comments_blocked: Kommentare blockiert
-            creation_enabled: Vorschlagserstellung aktiviert
+            creation_enabled: Frageserstellung aktiviert
             endorsements_blocked: Zustimmungen blockiert
             endorsements_enabled: Bestätigungen aktiviert
-            question_answering_enabled: Vorschlagsantworten aktiviert
-            publish_answers_immediately: Vorschlagsantworten sofort veröffentlichten
-            suggested_hashtags: Hashtags schlug Benutzern neue Vorschläge vor
+            question_answering_enabled: Fragesantworten aktiviert
+            publish_answers_immediately: Fragesantworten sofort veröffentlichten
+            suggested_hashtags: Hashtags schlug Benutzern neue Fragen vor
             votes_blocked: Abstimmung blockiert
             votes_enabled: Abstimmung aktiviert
             votes_hidden: Abstimmungen ausgeblendet (wenn Abstimmungen aktiviert sind, wird dies die Anzahl der Abstimmungen verbergen)
@@ -152,10 +152,10 @@ de:
       questions:
         admin:
           question_note_created:
-            email_intro: Jemand hat eine Notiz für Vorschlag „%{resource_title}“ erstellt. Sie können sie über <a href="%{admin_question_info_url}">den Admin-Panel</a> anzeigen
-            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie diesen Vorschlag bewerten können.
-            email_subject: Jemand hat eine Notiz für Vorschlag %{resource_title} erstellt.
-            notification_title: Jemand hat eine Notiz für Vorschlag <a href="%{resource_path}">%{resource_title}</a>erstellt. Sie können sie über <a href="%{admin_question_info_path}">den Admin-Panel</a> anzeigen
+            email_intro: Jemand hat eine Notiz für Frage „%{resource_title}“ erstellt. Sie können sie über <a href="%{admin_question_info_url}">den Admin-Panel</a> anzeigen
+            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie diesen Frage bewerten können.
+            email_subject: Jemand hat eine Notiz für Frage %{resource_title} erstellt.
+            notification_title: Jemand hat eine Notiz für Frage <a href="%{resource_path}">%{resource_title}</a>erstellt. Sie können sie über <a href="%{admin_question_info_path}">den Admin-Panel</a> anzeigen
         collaborative_draft_access_accepted:
           email_intro: '%{requester_name} wurde als Beitrag zum <a href="%{resource_path}">%{resource_title}</a> Verbundentwurf akzeptiert.'
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Mitarbeiter von <a href="%{resource_path}">%{resource_title}</a>.
@@ -187,126 +187,126 @@ de:
           email_subject: "%{author_name} %{author_nickname} zog den %{resource_title} gemeinsamen Entwurf zurück."
           notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> <strong>zurückgezogen</strong> der gemeinschaftliche Entwurf <a href="%{resource_path}">%{resource_title}</a>.
         creation_enabled:
-          email_intro: 'Sie können jetzt neue Vorschläge in %{participatory_space_title}erstellen! Starten Sie die Teilnahme an dieser Seite:'
+          email_intro: 'Sie können jetzt neue Fragen in %{participatory_space_title}erstellen! Starten Sie die Teilnahme an dieser Seite:'
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{participatory_space_title}. Sie können nach dem vorherigen Link keine Benachrichtigungen mehr erhalten.
-          email_subject: Vorschläge jetzt in %{participatory_space_title}verfügbar
-          notification_title: Sie können jetzt <a href="%{resource_path}">neue Vorschläge</a> in <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          email_subject: Fragen jetzt in %{participatory_space_title}verfügbar
+          notification_title: Sie können jetzt <a href="%{resource_path}">neue Fragen</a> in <a href="%{participatory_space_url}">%{participatory_space_title}</a>
         endorsing_enabled:
-          email_intro: 'Sie können Vorschläge in %{participatory_space_title}! Starten Sie die Teilnahme an dieser Seite:'
+          email_intro: 'Sie können Fragen in %{participatory_space_title}! Starten Sie die Teilnahme an dieser Seite:'
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{participatory_space_title}. Sie können nach dem vorherigen Link keine Benachrichtigungen mehr erhalten.
-          email_subject: Die Vorschläge für die Förderung haben für %{participatory_space_title}
-          notification_title: Sie können nun beginnen <a href="%{resource_path}">Vorschläge befürworten</a> in <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          email_subject: Die Fragen für die Förderung haben für %{participatory_space_title}
+          notification_title: Sie können nun beginnen <a href="%{resource_path}">Fragen befürworten</a> in <a href="%{participatory_space_url}">%{participatory_space_title}</a>
         question_accepted:
           affected_user:
-            email_intro: 'Ihr Vorschlag "%{resource_title}" wurde angenommen. Sie können die Antwort auf dieser Seite lesen:'
+            email_intro: 'Ihr Frage "%{resource_title}" wurde angenommen. Sie können die Antwort auf dieser Seite lesen:'
             email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Autor von "%{resource_title}" sind.
-            email_subject: Ihr Vorschlag wurde angenommen
-            notification_title: Ihr Vorschlag <a href="%{resource_path}">%{resource_title}</a> wurde angenommen.
+            email_subject: Ihr Frage wurde angenommen
+            notification_title: Ihr Frage <a href="%{resource_path}">%{resource_title}</a> wurde angenommen.
           follower:
-            email_intro: 'Der Vorschlag "%{resource_title}" wurde akzeptiert. Sie können die Antwort auf dieser Seite lesen:'
+            email_intro: 'Der Frage "%{resource_title}" wurde akzeptiert. Sie können die Antwort auf dieser Seite lesen:'
             email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie "%{resource_title}" folgen. Sie können es aus dem vorherigen Link aufheben.
-            email_subject: Ein Vorschlag, dem Sie folgen, wurde akzeptiert
-            notification_title: Der <a href="%{resource_path}">%{resource_title}</a> Vorschlag wurde angenommen.
+            email_subject: Ein Frage, dem Sie folgen, wurde akzeptiert
+            notification_title: Der <a href="%{resource_path}">%{resource_title}</a> Frage wurde angenommen.
         question_evaluating:
           affected_user:
             email_intro: 'Ihr Angebot "%{resource_title}" wird derzeit geprüft. Sie können auf dieser Seite nach einer Antwort suchen:'
             email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Autor von "%{resource_title}" sind.
-            email_subject: Ihr Vorschlag wird geprüft
-            notification_title: Ihr Vorschlag <a href="%{resource_path}">%{resource_title}</a> wird geprüft.
+            email_subject: Ihr Frage wird geprüft
+            notification_title: Ihr Frage <a href="%{resource_path}">%{resource_title}</a> wird geprüft.
           follower:
-            email_intro: 'Der Vorschlag "%{resource_title}" wird gerade ausgewertet. Sie können auf dieser Seite nach einer Antwort suchen:'
+            email_intro: 'Der Frage "%{resource_title}" wird gerade ausgewertet. Sie können auf dieser Seite nach einer Antwort suchen:'
             email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie "%{resource_title}" folgen. Sie können es aus dem vorherigen Link aufheben.
-            email_subject: Ein Vorschlag, dem Sie folgen, wird evaluiert
-            notification_title: Der <a href="%{resource_path}">%{resource_title}</a> Vorschlag wird evaluiert.
+            email_subject: Ein Frage, dem Sie folgen, wird evaluiert
+            notification_title: Der <a href="%{resource_path}">%{resource_title}</a> Frage wird evaluiert.
         question_mentioned:
-          email_intro: Ihr Vorschlag „%{mentioned_question_title}“ wurde in diesem <a href="%{resource_url}">Bereich</a> in den Kommentaren erwähnt.
+          email_intro: Ihr Frage „%{mentioned_question_title}“ wurde in diesem <a href="%{resource_url}">Bereich</a> in den Kommentaren erwähnt.
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Autor von "%{resource_title}" sind.
-          email_subject: Ihr Vorschlag "%{mentioned_question_title}" wurde erwähnt
-          notification_title: Ihr Vorschlag „%{mentioned_question_title}“ erwähnt <a href="%{resource_path}">in diesem Raum</a> in den Kommentaren.
+          email_subject: Ihr Frage "%{mentioned_question_title}" wurde erwähnt
+          notification_title: Ihr Frage „%{mentioned_question_title}“ erwähnt <a href="%{resource_path}">in diesem Raum</a> in den Kommentaren.
         question_published:
-          email_intro: '%{author_name} %{author_nickname}, dem Sie folgen, hat einen neuen Vorschlag mit dem Namen "%{resource_title}" veröffentlicht. Überprüfen Sie es und tragen Sie bei:'
+          email_intro: '%{author_name} %{author_nickname}, dem Sie folgen, hat einen neuen Frage mit dem Namen "%{resource_title}" veröffentlicht. Überprüfen Sie es und tragen Sie bei:'
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{author_nickname}. Sie können nach dem vorherigen Link keine Benachrichtigungen mehr erhalten.
-          email_subject: Neuer Vorschlag "%{resource_title}" um %{author_nickname}
-          notification_title: Der <a href="%{resource_path}">%{resource_title}</a> Vorschlag wurde von <a href="%{author_path}">%{author_name} %{author_nickname}</a>.
+          email_subject: Neuer Frage "%{resource_title}" um %{author_nickname}
+          notification_title: Der <a href="%{resource_path}">%{resource_title}</a> Frage wurde von <a href="%{author_path}">%{author_name} %{author_nickname}</a>.
         question_published_for_space:
-          email_intro: Der Vorschlag "%{resource_title}" wurde zu "%{participatory_space_title}" hinzugefügt, dem Sie folgen.
+          email_intro: Der Frage "%{resource_title}" wurde zu "%{participatory_space_title}" hinzugefügt, dem Sie folgen.
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie "%{participatory_space_title}" folgen. Sie können es aus dem vorherigen Link aufheben.
-          email_subject: Neuer Vorschlag "%{resource_title}" zu %{participatory_space_title}hinzugefügt
-          notification_title: Der Vorschlag <a href="%{resource_path}">%{resource_title}</a> wurde zu %{participatory_space_title}hinzugefügt
+          email_subject: Neuer Frage "%{resource_title}" zu %{participatory_space_title}hinzugefügt
+          notification_title: Der Frage <a href="%{resource_path}">%{resource_title}</a> wurde zu %{participatory_space_title}hinzugefügt
         question_rejected:
           affected_user:
-            email_intro: 'Ihr Vorschlag "%{resource_title}" wurde abgelehnt. Sie können die Antwort auf dieser Seite lesen:'
+            email_intro: 'Ihr Frage "%{resource_title}" wurde abgelehnt. Sie können die Antwort auf dieser Seite lesen:'
             email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Autor von "%{resource_title}" sind.
-            email_subject: Ihr Vorschlag wurde abgelehnt
-            notification_title: Ihr Vorschlag <a href="%{resource_path}">%{resource_title}</a> wurde abgelehnt.
+            email_subject: Ihr Frage wurde abgelehnt
+            notification_title: Ihr Frage <a href="%{resource_path}">%{resource_title}</a> wurde abgelehnt.
           follower:
-            email_intro: 'Der Vorschlag "%{resource_title}" wurde abgelehnt. Sie können die Antwort auf dieser Seite lesen:'
+            email_intro: 'Der Frage "%{resource_title}" wurde abgelehnt. Sie können die Antwort auf dieser Seite lesen:'
             email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie "%{resource_title}" folgen. Sie können es aus dem vorherigen Link aufheben.
-            email_subject: Ein Vorschlag, dem Sie folgen, wurde abgelehnt
-            notification_title: Der <a href="%{resource_path}">%{resource_title}</a> Vorschlag wurde abgelehnt.
+            email_subject: Ein Frage, dem Sie folgen, wurde abgelehnt
+            notification_title: Der <a href="%{resource_path}">%{resource_title}</a> Frage wurde abgelehnt.
         question_update_category:
           email_intro: 'Ein Administrator hat die Kategorie Ihres Angebots "%{resource_title}" aktualisiert, sehen Sie es sich an:'
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie der Autor des Angebots sind.
-          email_subject: Die Vorschlagskategorie %{resource_title} wurde aktualisiert
-          notification_title: Die <a href="%{resource_path}">%{resource_title}</a> Vorschlagskategorie wurde von einem Administrator aktualisiert.
+          email_subject: Die Frageskategorie %{resource_title} wurde aktualisiert
+          notification_title: Die <a href="%{resource_path}">%{resource_title}</a> Frageskategorie wurde von einem Administrator aktualisiert.
         question_update_scope:
-          email_intro: 'Ein Administrator hat den Umfang Ihres Vorschlags „%{resource_title}“ aktualisiert, über folgenden Link können Sie es anzeigen:'
+          email_intro: 'Ein Administrator hat den Umfang Ihres Frages „%{resource_title}“ aktualisiert, über folgenden Link können Sie es anzeigen:'
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie der Autor des Angebots sind.
-          email_subject: Der Umfang des Vorschlags %{resource_title} wurde aktualisiert
-          notification_title: Der Umgang des Vorschlags <a href="%{resource_path}">%{resource_title}</a> wurde von einem Administrator aktualisiert.
+          email_subject: Der Umfang des Frages %{resource_title} wurde aktualisiert
+          notification_title: Der Umgang des Frages <a href="%{resource_path}">%{resource_title}</a> wurde von einem Administrator aktualisiert.
         voting_enabled:
-          email_intro: 'Sie können Vorschläge in %{participatory_space_title}abstimmen! Starten Sie die Teilnahme an dieser Seite:'
+          email_intro: 'Sie können Fragen in %{participatory_space_title}abstimmen! Starten Sie die Teilnahme an dieser Seite:'
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{participatory_space_title}. Sie können nach dem vorherigen Link keine Benachrichtigungen mehr erhalten.
-          email_subject: Die Abstimmung der Vorschläge hat für %{participatory_space_title}
+          email_subject: Die Abstimmung der Fragen hat für %{participatory_space_title}
           notification_title: Sie können jetzt <a href="%{resource_path}">Abstimmungsvorschläge</a> in <a href="%{participatory_space_url}">%{participatory_space_title}</a>starten
     gamification:
       badges:
         accepted_questions:
           conditions:
             - Wählen Sie den Bereich für die Teilnahme Ihrer Interessen mit der Einreichung von Vorschlägen aktiviert
-            - Versuchen Sie Vorschläge zu machen, die ausgeführt werden können. Auf diese Weise werden sie eher akzeptiert.
-          description: Dieses Abzeichen wird gewährt, wenn Sie neue Vorschläge einbringen und diese angenommen werden.
-          description_another: Dieser Benutzer hat %{score} Vorschläge akzeptiert.
-          description_own: Sie haben %{score} Vorschläge angenommen.
-          name: Akzeptierte Vorschläge
-          next_level_in: Erhalten Sie %{score} weitere Vorschläge, um das nächste Level zu erreichen!
-          unearned_another: Dieser Benutzer hat noch keine Vorschläge erhalten.
-          unearned_own: Sie haben noch keine Vorschläge erhalten.
+            - Versuchen Sie Fragen zu machen, die ausgeführt werden können. Auf diese Weise werden sie eher akzeptiert.
+          description: Dieses Abzeichen wird gewährt, wenn Sie neue Fragen einbringen und diese angenommen werden.
+          description_another: Dieser Benutzer hat %{score} Fragen akzeptiert.
+          description_own: Sie haben %{score} Fragen angenommen.
+          name: Akzeptierte Fragen
+          next_level_in: Erhalten Sie %{score} weitere Fragen, um das nächste Level zu erreichen!
+          unearned_another: Dieser Benutzer hat noch keine Fragen erhalten.
+          unearned_own: Sie haben noch keine Fragen erhalten.
         question_votes:
           conditions:
-            - Stöbern Sie und verbringen Sie etwas Zeit, die Vorschläge anderer Leute zu lesen
-            - Unterstützen Sie die Vorschläge, die Sie mögen oder interessant finden
-          description: Dieses Abzeichen wird gewährt, wenn Sie Vorschläge anderer Personen unterstützen.
-          description_another: Dieser Benutzer hat %{score} Vorschläge unterstützt.
-          description_own: Sie haben %{score} Vorschläge unterstützt.
-          name: Vorschlag unterstützt
-          next_level_in: Unterstütze %{score} weitere Vorschläge, um das nächste Level zu erreichen!
-          unearned_another: Dieser Benutzer hat noch keine Vorschläge unterstützt.
-          unearned_own: Sie haben noch keine Vorschläge unterstützt.
+            - Stöbern Sie und verbringen Sie etwas Zeit, die Fragen anderer Leute zu lesen
+            - Unterstützen Sie die Fragen, die Sie mögen oder interessant finden
+          description: Dieses Abzeichen wird gewährt, wenn Sie Fragen anderer Personen unterstützen.
+          description_another: Dieser Benutzer hat %{score} Fragen unterstützt.
+          description_own: Sie haben %{score} Fragen unterstützt.
+          name: Frage unterstützt
+          next_level_in: Unterstütze %{score} weitere Fragen, um das nächste Level zu erreichen!
+          unearned_another: Dieser Benutzer hat noch keine Fragen unterstützt.
+          unearned_own: Sie haben noch keine Fragen unterstützt.
         questions:
           conditions:
             - Wählen Sie den Bereich für die Teilnahme Ihrer Interessen mit der Einreichung von Vorschlägen aktiviert
-            - Neuen Vorschlag erstellen
+            - Neuen Frage erstellen
           description: Dieses Abzeichen wird gewährt, wenn Sie aktiv an neuen Vorschlägen teilnehmen.
-          description_another: Dieser Benutzer hat %{score} Vorschläge erstellt.
-          description_own: Sie haben %{score} Vorschläge erstellt.
-          name: Vorschläge
-          next_level_in: Erstellen Sie %{score} weitere Vorschläge, um das nächste Level zu erreichen!
-          unearned_another: Dieser Benutzer hat noch keine Vorschläge erstellt.
-          unearned_own: Sie haben noch keine Vorschläge erstellt.
+          description_another: Dieser Benutzer hat %{score} Fragen erstellt.
+          description_own: Sie haben %{score} Fragen erstellt.
+          name: Fragen
+          next_level_in: Erstellen Sie %{score} weitere Fragen, um das nächste Level zu erreichen!
+          unearned_another: Dieser Benutzer hat noch keine Fragen erstellt.
+          unearned_own: Sie haben noch keine Fragen erstellt.
     metrics:
       accepted_questions:
-        description: Anzahl der von den Benutzern akzeptierten Vorschläge
-        object: Vorschläge
-        title: Akzeptierte Vorschläge
+        description: Anzahl der von den Benutzern akzeptierten Fragen
+        object: Fragen
+        title: Akzeptierte Fragen
       endorsements:
         description: Anzahl der in Vorschlägen generierten Vermerke
         object: Änderungsvorschläge
         title: Änderungsvorschläge
       questions:
-        description: Anzahl der Vorschläge
-        object: Vorschläge
-        title: Vorschläge
+        description: Anzahl der Fragen
+        object: Fragen
+        title: Fragen
       votes:
         description: Anzahl der Unterstützungen zu Vorschlägen
         object: Unterstützer
@@ -314,28 +314,30 @@ de:
     participatory_processes:
       participatory_process_groups:
         highlighted_questions:
-          questions: Vorschläge
+          questions: Fragen
+      statistics:
+        questions_count: Fragen
     participatory_spaces:
       highlighted_questions:
         see_all: Alle anzeigen (%{count})
     questions:
       actions:
-        answer_question: Vorschlag beantworten
-        edit_question: Vorschlag bearbeiten
+        answer_question: Frage beantworten
+        edit_question: Frage bearbeiten
         import: Importieren von einer anderen Komponente
-        new: Neuer Vorschlag
+        new: Neuer Frage
         participatory_texts: Partizipative Texte
-        show: Vorschlag anzeigen
+        show: Frage anzeigen
         title: Aktionen
       admin:
         actions:
           preview: Vorschau
         exports:
           comments: Kommentare
-          questions: Vorschläge
+          questions: Fragen
         models:
           question:
-            name: Vorschlag
+            name: Frage
         participatory_texts:
           bulk-actions:
             are_you_sure: Sind Sie sicher, den gesamten Entwurf des partizipativen Textes zu verwerfen?
@@ -346,9 +348,9 @@ de:
           import:
             invalid: Das Formular ist ungültig!
             invalid_file: Die Datei enthält Fehler. Bearbeiten Sie den Inhalt der Datei und laden Sie sie erneut hoch.
-            success: Herzlichen Glückwunsch, die folgenden Abschnitte wurden aus dem importierten Dokument analysiert, sie wurden in Vorschläge konvertiert. Jetzt können Sie alles überprüfen und anpassen, bevor Sie es veröffentlichen.
+            success: Herzlichen Glückwunsch, die folgenden Abschnitte wurden aus dem importierten Dokument analysiert, sie wurden in Fragen konvertiert. Jetzt können Sie alles überprüfen und anpassen, bevor Sie es veröffentlichen.
           index:
-            info_1: Die folgenden Abschnitte wurden aus dem importierten Dokument analysiert, sie wurden in Vorschläge konvertiert. Jetzt können Sie alles überprüfen und anpassen, bevor Sie es veröffentlichen.
+            info_1: Die folgenden Abschnitte wurden aus dem importierten Dokument analysiert, sie wurden in Fragen konvertiert. Jetzt können Sie alles überprüfen und anpassen, bevor Sie es veröffentlichen.
             publish_document: Dokument veröffentlichen
             save_draft: Entwurf speichern
             title: VORSCHAU TEILNEHMERTEXT
@@ -357,12 +359,12 @@ de:
               md: Markdown
               odt: Odt
             bottom_hint: "(Sie können Dokumentabschnitte in der Vorschau anzeigen und sortieren.)"
-            document_legend: 'Fügen Sie ein Dokument hinzu, das kleiner als 2 MB ist. Jeder Abschnitt wird so lange in 3 bis 3 Ebenen tief in die Vorschläge geparst. Unterstützte Formate sind: %{valid_mime_types}'
+            document_legend: 'Fügen Sie ein Dokument hinzu, das kleiner als 2 MB ist. Jeder Abschnitt wird so lange in 3 bis 3 Ebenen tief in die Fragen geparst. Unterstützte Formate sind: %{valid_mime_types}'
             title: DOKUMENT HINZUFÜGEN
             upload_document: Dokument hochladen
           publish:
-            invalid: Vorschläge konnten nicht veröffentlicht werden
-            success: Alle Vorschläge wurden veröffentlicht
+            invalid: Fragen konnten nicht veröffentlicht werden
+            success: Alle Fragen wurden veröffentlicht
           sections:
             article: "<em>Artikel</em>"
             section: "<em>Abschnitt:</em> <strong>%{title}</strong>"
@@ -375,11 +377,11 @@ de:
             answer_question: Antworten
             evaluating: In Bewertung
             rejected: Abgelehnt
-            title: Antwort auf Vorschlag %{title}
+            title: Antwort auf Frage %{title}
         question_notes:
           create:
-            error: Beim Erstellen dieser Vorschlagsnotiz ist ein Fehler aufgetreten
-            success: Vorschlagsanmerkung erfolgreich erstellt
+            error: Beim Erstellen dieser Fragesnotiz ist ein Fehler aufgetreten
+            success: Fragesanmerkung erfolgreich erstellt
           form:
             note: Anmerkung
             submit: Absenden
@@ -387,17 +389,17 @@ de:
           title: Private Notizen
         questions:
           answer:
-            invalid: Es gab ein Problem bei der Beantwortung dieses Vorschlags
-            success: Der Vorschlag wurde erfolgreich beantwortet
+            invalid: Es gab ein Problem bei der Beantwortung dieses Frages
+            success: Der Frage wurde erfolgreich beantwortet
           create:
-            invalid: Beim Erstellen dieses Vorschlags ist ein Fehler aufgetreten
-            success: Vorschlag erfolgreich erstellt
+            invalid: Beim Erstellen dieses Frages ist ein Fehler aufgetreten
+            success: Frage erfolgreich erstellt
           edit:
-            title: Vorschlag aktualisieren
+            title: Frage aktualisieren
             update: Aktualisieren
           form:
             attachment_legend: "(Optional) Anhang hinzufügen"
-            created_in_meeting: Dieser Vorschlag stammt von einer Besprechung
+            created_in_meeting: Dieser Frage stammt von einer Besprechung
             select_a_category: Kategorie auswählen
             select_a_meeting: Besprechung auswählen
           index:
@@ -413,19 +415,19 @@ de:
             publish_answers: Antworten veröffentlichen
             select_component: Komponente auswählen
             selected: ausgewählt
-            split: Vorschläge aufteilen
+            split: Fragen aufteilen
             split_button: Aufteilen
-            title: Vorschläge
+            title: Fragen
             unassign_from_valuator: Zuweisung an den Schätzer zurückziehen
             unassign_from_valuator_button: Zuweisung aufheben
             update: Aktualisieren
             update_scope_button: Umfang aktualisieren
           new:
             create: Erstellen
-            title: Vorschlag erstellen
+            title: Frage erstellen
           publish_answers:
-            number_of_questions: Die Antworten für %{number} Vorschläge werden veröffentlicht.
-            select_a_question: Bitte wählen Sie einen Vorschlag
+            number_of_questions: Die Antworten für %{number} Fragen werden veröffentlicht.
+            select_a_question: Bitte wählen Sie einen Frage
           show:
             amendments_count: Anzahl der Ergänzungen
             assigned_valuators: Zugewiesene Schätzer
@@ -445,59 +447,59 @@ de:
               one: und 1 mehr
               other: und %{count} mehr
             photos: Fotos
-            questions: Vorschläge
+            questions: Fragen
             ranking: "%{ranking} von %{total}"
             related_meetings: Ähnliche Besprechungen
             remove_assignment: Zuweisung entfernen
-            remove_assignment_confirmation: Sind Sie sicher, diesen Schätzer von diesem Vorschlag zurückzuziehen?
+            remove_assignment_confirmation: Sind Sie sicher, diesen Schätzer von diesem Frage zurückzuziehen?
             valuators: Schätzer
             votes_count: Anzahl der Unterstützungen
             votes_ranking: Nach Unterstützungen sortieren
           update_category:
-            invalid: 'Diese Vorschläge gehörten bereits zur Kategorie %{subject_name}: %{questions}.'
+            invalid: 'Diese Fragen gehörten bereits zur Kategorie %{subject_name}: %{questions}.'
             select_a_category: Bitte wählen Sie eine Kategorie
-            select_a_question: Bitte wählen Sie einen Vorschlag
-            success: 'Die Vorschlag wurde erfolgreich zur Kategorie %{subject_name} aktualisiert: %{questions}.'
+            select_a_question: Bitte wählen Sie einen Frage
+            success: 'Die Frage wurde erfolgreich zur Kategorie %{subject_name} aktualisiert: %{questions}.'
           update_scope:
-            invalid: 'Diese Vorschläge gehörten bereits um Umfang %{subject_name}: %{questions}.'
-            select_a_question: Bitte wählen Sie einen Vorschlag
+            invalid: 'Diese Fragen gehörten bereits um Umfang %{subject_name}: %{questions}.'
+            select_a_question: Bitte wählen Sie einen Frage
             select_a_scope: Bitte wählen Sie einen Umfang
-            success: 'Die Vorschläge wurden erfolgreich zum Umfang %{subject_name} aktualisiert: %{questions}.'
+            success: 'Die Fragen wurden erfolgreich zum Umfang %{subject_name} aktualisiert: %{questions}.'
         questions_imports:
           create:
-            invalid: Beim Importieren der Vorschläge ist ein Problem aufgetreten
-            success: "%{number} Vorschläge wurden erfolgreich importiert"
+            invalid: Beim Importieren der Fragen ist ein Problem aufgetreten
+            success: "%{number} Fragen wurden erfolgreich importiert"
           new:
-            create: Vorschläge importieren
-            no_components: In diesem partizipatorischen Bereich gibt es keine weiteren Vorschlagskomponenten, aus denen die Vorschläge importiert werden könnten.
+            create: Fragen importieren
+            no_components: In diesem partizipatorischen Bereich gibt es keine weiteren Frageskomponenten, aus denen die Fragen importiert werden könnten.
             select_component: Bitte wählen Sie eine Komponente aus
-            select_states: Überprüfen Sie die Status der zu importierenden Vorschläge
+            select_states: Überprüfen Sie die Status der zu importierenden Fragen
         questions_merges:
           create:
-            invalid: Beim Zusammenführen der ausgewählten Vorschläge ist ein Fehler aufgetreten.
-            success: Erfolgreich die Vorschläge in eine neue zusammengeführt.
+            invalid: Beim Zusammenführen der ausgewählten Fragen ist ein Fehler aufgetreten.
+            success: Erfolgreich die Fragen in eine neue zusammengeführt.
         questions_splits:
           create:
-            invalid: Beim Teilen der ausgewählten Vorschläge ist ein Fehler aufgetreten.
-            success: Die Vorschläge wurden erfolgreich in neue aufgeteilt.
+            invalid: Beim Teilen der ausgewählten Fragen ist ein Fehler aufgetreten.
+            success: Die Fragen wurden erfolgreich in neue aufgeteilt.
         valuation_assignments:
           create:
             invalid: Bei der Zuweisung von Vorschlägen an einen Schätzer ist ein Fehler aufgetreten
-            success: Die Vorschläge wurden erfolgreich dem Schätzer zugewiesen
+            success: Die Fragen wurden erfolgreich dem Schätzer zugewiesen
           delete:
             invalid: Beim Zurückziehen der Zuweisung von Vorschlägen an einen Schätzer ist ein Fehler aufgetreten
-            success: Die Zuweisung der Vorschläge wurden erfolgreich von dem Schätzer zurückgezogen
+            success: Die Zuweisung der Fragen wurden erfolgreich von dem Schätzer zurückgezogen
       admin_log:
         question:
-          answer: "%{user_name} beantwortete den %{resource_name} Vorschlag auf den %{space_name} Feldern"
-          create: "%{user_name} hat den %{resource_name} Vorschlag auf den %{space_name} Feldern als offizieller Vorschlag erstellt"
-          publish_answer: "%{user_name} veröffentlichte die Antwort auf den Vorschlag %{resource_name} im Bereich %{space_name}"
-          update: "%{user_name} aktualisiert den %{resource_name} offiziellen Vorschlag für die %{space_name} Flächen"
+          answer: "%{user_name} beantwortete den %{resource_name} Frage auf den %{space_name} Feldern"
+          create: "%{user_name} hat den %{resource_name} Frage auf den %{space_name} Feldern als offizieller Frage erstellt"
+          publish_answer: "%{user_name} veröffentlichte die Antwort auf den Frage %{resource_name} im Bereich %{space_name}"
+          update: "%{user_name} aktualisiert den %{resource_name} offiziellen Frage für die %{space_name} Flächen"
         question_note:
-          create: "%{user_name} eine private Notiz zu dem %{resource_name} Vorschlag auf dem %{space_name} Feld hinterlassen"
+          create: "%{user_name} eine private Notiz zu dem %{resource_name} Frage auf dem %{space_name} Feld hinterlassen"
         valuation_assignment:
-          create: "%{user_name} hat den Vorschlag %{resource_name} einem Schätzer zugewiesen"
-          delete: "%{user_name} hat die Zuweisung vom Vorschlag %{question_title} von einem Schätzer zurückgezogen"
+          create: "%{user_name} hat den Frage %{resource_name} einem Schätzer zugewiesen"
+          delete: "%{user_name} hat die Zuweisung vom Frage %{question_title} von einem Schätzer zurückgezogen"
       answers:
         accepted: Angenommen
         evaluating: In Bewertung
@@ -524,17 +526,17 @@ de:
         filter_type_values:
           all: Alle
           amendments: Änderungsanträge
-          questions: Vorschläge
+          questions: Fragen
       collaborative_drafts:
         collaborative_draft:
           publish:
             error: Bei der Veröffentlichung des gemeinsamen Entwurfs sind Fehler aufgetreten.
             irreversible_action_modal:
-              body: Nachdem der Entwurf als Vorschlag veröffentlicht wurde, kann der Entwurf nicht mehr bearbeitet werden. Der Vorschlag akzeptiert keine neuen Autoren oder Beiträge.
+              body: Nachdem der Entwurf als Frage veröffentlicht wurde, kann der Entwurf nicht mehr bearbeitet werden. Der Frage akzeptiert keine neuen Autoren oder Beiträge.
               cancel: Abbrechen
-              ok: Als Vorschlag veröffentlichen
+              ok: Als Frage veröffentlichen
               title: Die folgende Aktion ist irreversibel
-            success: Collaborative Draft erfolgreich als Vorschlag veröffentlicht.
+            success: Collaborative Draft erfolgreich als Frage veröffentlicht.
           view_collaborative_draft: Gemeinsamen Entwurf anzeigen
           withdraw:
             error: Es gab Fehler beim Schließen des gemeinsamen Entwurfs.
@@ -607,18 +609,18 @@ de:
         show:
           back: Zurück
           edit: Bearbeiten Sie den gemeinsamen Entwurf
-          final_question: Endgültiger Vorschlag
-          final_question_help_text: Dieser Entwurf ist fertig. Sie können den endgültigen fertigen Vorschlag sehen
+          final_question: Endgültiger Frage
+          final_question_help_text: Dieser Entwurf ist fertig. Sie können den endgültigen fertigen Frage sehen
           hidden_authors_count:
             one: und %{count} weitere Person
             other: und %{count} weitere Personen
-          info-message: Dies ist ein <strong>kollaborativen Entwurf</strong> für einen Vorschlag. Dies bedeutet, dass Sie ihren Autoren helfen können, den Vorschlag zu gestalten, indem Sie den unten stehenden Kommentarabschnitt verwenden, oder ihn direkt verbessern, indem Sie den Zugriff anfordern, um ihn zu bearbeiten. Sobald die Autoren Ihnen Zugriff gewähren, können Sie Änderungen an diesem Entwurf vornehmen.
+          info-message: Dies ist ein <strong>kollaborativen Entwurf</strong> für einen Frage. Dies bedeutet, dass Sie ihren Autoren helfen können, den Frage zu gestalten, indem Sie den unten stehenden Kommentarabschnitt verwenden, oder ihn direkt verbessern, indem Sie den Zugriff anfordern, um ihn zu bearbeiten. Sobald die Autoren Ihnen Zugriff gewähren, können Sie Änderungen an diesem Entwurf vornehmen.
           publish: Veröffentlichen
           publish_info: Veröffentlichen Sie diese Version des Entwurfs oder
-          published_question: Veröffentlichter Vorschlag
+          published_question: Veröffentlichter Frage
           request_access: Zugangsanfragen
           requested_access: Zugriff angefordert
-          version_history: Änderungsverlauf für diesen Vorschlag
+          version_history: Änderungsverlauf für diesen Frage
           withdraw: den Entwurf zurückziehen
         states:
           open: Öffnen
@@ -645,13 +647,13 @@ de:
           step_of: Schritt %{current_step_num} von %{total_steps}
           title: Gemeinschaftliche Entwurfsschritte
       create:
-        error: Beim Speichern des Vorschlags ist ein Fehler aufgetreten.
-        success: Der Vorschlag wurde erfolgreich erstellt. Gespeichert als Entwurf.
+        error: Beim Speichern des Frages ist ein Fehler aufgetreten.
+        success: Der Frage wurde erfolgreich erstellt. Gespeichert als Entwurf.
       destroy_draft:
-        error: Es gab Fehler beim Löschen des Vorschlagsentwurfs.
-        success: Der Vorschlagsentwurf wurde erfolgreich gelöscht.
+        error: Es gab Fehler beim Löschen des Fragesentwurfs.
+        success: Der Fragesentwurf wurde erfolgreich gelöscht.
       last_activity:
-        new_question_at_html: "<span>Neuer Vorschlag bei %{link}</span>"
+        new_question_at_html: "<span>Neuer Frage bei %{link}</span>"
       models:
         collaborative_draft:
           fields:
@@ -664,7 +666,7 @@ de:
             comments: Bemerkungen
             id: ICH WÜRDE
             notes: Anmerkungen
-            official_question: Offizieller Vorschlag
+            official_question: Offizieller Frage
             published_answer: Veröffentlichte Antwort
             published_at: Veröffentlicht unter
             scope: Umfang
@@ -674,7 +676,7 @@ de:
             valuators: Schätzer
             votes: Stimmen
       new:
-        limit_reached: Sie können keine neuen Vorschläge erstellen, da Sie das Maximum erreicht haben.
+        limit_reached: Sie können keine neuen Fragen erstellen, da Sie das Maximum erreicht haben.
       participatory_text_question:
         alternative_title: Momentan gibt es keine Mitmachtexte
         buttons:
@@ -683,36 +685,36 @@ de:
           comments: Bemerkungen
       question_votes:
         create:
-          error: Es gab Fehler bei der Abstimmung des Vorschlags.
+          error: Es gab Fehler bei der Abstimmung des Frages.
       questions:
         compare:
           continue: Fortsetzen
-          no_similars_found: Gut gemacht! Keine ähnlichen Vorschläge gefunden
-          title: Ähnliche Vorschläge
+          no_similars_found: Gut gemacht! Keine ähnlichen Fragen gefunden
+          title: Ähnliche Fragen
         complete:
           send: Senden
-          title: Vorschlag vervollständigen
+          title: Frage vervollständigen
         count:
           questions_count:
-            one: "%{count} Vorschlag"
-            other: "%{count} Vorschläge"
+            one: "%{count} Frage"
+            other: "%{count} Fragen"
         edit:
           attachment_legend: "(Optional) Fügen Sie einen Anhang hinzu"
           back: Zurück
           select_a_category: Bitte wählen sie eine Kategorie
           send: Abschicken
-          title: Vorschlag bearbeiten
+          title: Frage bearbeiten
         edit_draft:
           discard: Verwerfen Sie diesen Entwurf
-          discard_confirmation: Möchten Sie diesen Vorschlagsentwurf wirklich verwerfen?
+          discard_confirmation: Möchten Sie diesen Fragesentwurf wirklich verwerfen?
           send: Vorschau
-          title: Vorschlagsentwurf bearbeiten
+          title: Fragesentwurf bearbeiten
         filters:
           activity: Meine Aktivität
           all: Alle
           amendment_type: Art
           category: Kategorie
-          my_questions: Meine Vorschläge
+          my_questions: Meine Fragen
           origin: Ursprung
           related_to: Bezüglich
           scope: Umfang
@@ -727,18 +729,18 @@ de:
           unfold: Aufklappen
         index:
           collaborative_drafts_list: Greifen Sie auf gemeinsame Entwürfe zu
-          new_question: Neuer Vorschlag
-          see_all_withdrawn: Sehen Sie sich alle zurückgezogenen Vorschläge an
-          view_question: Vorschlag anzeigen
+          new_question: Neuer Frage
+          see_all_withdrawn: Sehen Sie sich alle zurückgezogenen Fragen an
+          view_question: Frage anzeigen
         linked_questions:
           question_votes:
             one: Abstimmung
             other: Stimmen
         new:
           send: Fortsetzen
-          title: Neuen Vorschlag erstellen
+          title: Neuen Frage erstellen
         orders:
-          label: 'Vorschläge sortieren nach:'
+          label: 'Fragen sortieren nach:'
           most_commented: Am meisten kommentiert
           most_endorsed: Am meisten befürwortet
           most_followed: Am meisten gefolgt
@@ -752,49 +754,49 @@ de:
           view_index:
             see_index: Index anzeigen
         preview:
-          modify: Vorschlag ändern
+          modify: Frage ändern
           question_edit_before_minutes:
-            one: Sie können diesen Vorschlag in der ersten Minute nach seiner Veröffentlichung bearbeiten. Nach Ablauf dieses Zeitfensters können Sie diesen nicht mehr bearbeiten.
-            other: Sie können diesen Vorschlag in den ersten %{count} Minute nach seiner Veröffentlichung bearbeiten. Nach Ablauf dieses Zeitfensters können Sie diesen nicht mehr bearbeiten.
+            one: Sie können diesen Frage in der ersten Minute nach seiner Veröffentlichung bearbeiten. Nach Ablauf dieses Zeitfensters können Sie diesen nicht mehr bearbeiten.
+            other: Sie können diesen Frage in den ersten %{count} Minute nach seiner Veröffentlichung bearbeiten. Nach Ablauf dieses Zeitfensters können Sie diesen nicht mehr bearbeiten.
           publish: Veröffentlichen
-          title: Vorschlag veröffentlichen
+          title: Frage veröffentlichen
         question:
           creation_date: 'Erstellt am %{date}'
-          view_question: Vorschlag anzeigen
+          view_question: Frage anzeigen
         questions:
-          empty: Es gibt noch keinen Vorschlag
-          empty_filters: Es gibt keine Vorschläge mit diesem Kriterium
+          empty: Es gibt noch keinen Frage
+          empty_filters: Es gibt keine Fragen mit diesem Kriterium
         show:
           answer: Antworten
           back_to: Zurück zu
           back_to_list: Zurück zur Liste
           changes_at_title: Ergänzung zu „%{title}“
           comments: Kommentare
-          edit_question: Vorschlag bearbeiten
+          edit_question: Frage bearbeiten
           endorsements_list: Liste der Befürworter
           estimated_cost: Geschätzte Kosten
           hidden_endorsers_count:
             one: und %{count} weitere Person
             other: und %{count} weitere Personen
-          link_to_collaborative_draft_help_text: Dieser Vorschlag ist das Ergebnis eines gemeinsamen Entwurfs. Überprüfen Sie die Geschichte
+          link_to_collaborative_draft_help_text: Dieser Frage ist das Ergebnis eines gemeinsamen Entwurfs. Überprüfen Sie die Geschichte
           link_to_collaborative_draft_text: Gemeinsamen Entwurf anzeigen
-          link_to_promoted_emendation_help_text: Dieser Vorschlag hat eine markierte Berichtigung
+          link_to_promoted_emendation_help_text: Dieser Frage hat eine markierte Berichtigung
           link_to_promoted_emendation_text: Siehe abgelehnte Berichtigung.
           link_to_question_from_emendation_help_text: Dies ist eine abgelehnte Berichtigung
-          link_to_question_from_emendation_text: Den Vorschlag ansehen
-          question_accepted_reason: 'Dieser Vorschlag wurde angenommen, weil:'
-          question_in_evaluation_reason: Dieser Vorschlag wird evaluiert
-          question_rejected_reason: 'Dieser Vorschlag wurde abgelehnt, weil:'
+          link_to_question_from_emendation_text: Den Frage ansehen
+          question_accepted_reason: 'Dieser Frage wurde angenommen, weil:'
+          question_in_evaluation_reason: Dieser Frage wird evaluiert
+          question_rejected_reason: 'Dieser Frage wurde abgelehnt, weil:'
           read_less: Weniger lesen
           read_more: Weiterlesen
           report: Melden
-          withdraw_btn_hint: Sie können Ihren Vorschlag zurückziehen, wenn Sie es sich anders überlegen, solange Sie keine Unterstützung erhalten haben. Der Vorschlag wird nicht gelöscht, er erscheint in der Liste der zurückgezogenen Vorschläge.
-          withdraw_confirmation_html: Sind Sie sicher, dass Sie diesen Vorschlag zurückziehen möchten?<br><br><strong>Diese Aktion kann nicht abgebrochen werden!</strong>
-          withdraw_question: Vorschlag zurückziehen
+          withdraw_btn_hint: Sie können Ihren Frage zurückziehen, wenn Sie es sich anders überlegen, solange Sie keine Unterstützung erhalten haben. Der Frage wird nicht gelöscht, er erscheint in der Liste der zurückgezogenen Fragen.
+          withdraw_confirmation_html: Sind Sie sicher, dass Sie diesen Frage zurückziehen möchten?<br><br><strong>Diese Aktion kann nicht abgebrochen werden!</strong>
+          withdraw_question: Frage zurückziehen
         tags:
           changed_from: "(geändert von <u>%{previous_name}</u> durch einen Administrator)"
         update:
-          title: Vorschlag aktualisieren
+          title: Frage aktualisieren
         vote_button:
           already_voted: Bereits unterstützt
           already_voted_hover: Unterstützung zurückziehen
@@ -806,22 +808,22 @@ de:
           count:
             one: UNTERSTÜTZUNG
             other: UNTERSTÜTZUNGEN
-          most_popular_question: Beliebteste Vorschläge
+          most_popular_question: Beliebteste Fragen
           need_more_votes: Benötigt weitere Unterstützungen
         voting_rules:
           can_accumulate_supports_beyond_threshold:
-            description: Jeder Vorschlag kann mehr als %{limit} Unterstützungen sammeln
+            description: Jeder Frage kann mehr als %{limit} Unterstützungen sammeln
           minimum_votes_per_user:
-            description: Sie müssen mindestens %{votes} Stimmen auf verschiedene Vorschläge verteilen.
+            description: Sie müssen mindestens %{votes} Stimmen auf verschiedene Fragen verteilen.
             given_enough_votes: Du hast genug Unterstützung gegeben.
-            supports_remaining: Sie müssen %{remaining_votes} weitere Vorschläge abgeben, damit Ihre Stimmen berücksichtigt werden.
+            supports_remaining: Sie müssen %{remaining_votes} weitere Fragen abgeben, damit Ihre Stimmen berücksichtigt werden.
           question_limit:
-            description: Sie können bis zu %{limit} Vorschläge erstellen.
+            description: Sie können bis zu %{limit} Fragen erstellen.
           threshold_per_question:
-            description: Um validiert zu werden, müssen die Vorschläge %{limit} Unterstützungen erreichen
+            description: Um validiert zu werden, müssen die Fragen %{limit} Unterstützungen erreichen
           title: 'Die Abstimmung unterliegt folgenden Regeln:'
           vote_limit:
-            description: Sie können bis zu %{limit} Vorschläge abstimmen.
+            description: Sie können bis zu %{limit} Fragen abstimmen.
             left: Verbleibend
             votes: Stimmen
         wizard_aside:
@@ -830,47 +832,47 @@ de:
           back_from_step_2: Zurück zu Vorschlägen
           back_from_step_3: Zurück zum Vergleich von Vorschlägen
           back_from_step_4: Zurück zum Entwurf bearbeiten
-          info: Sie erstellen einen <strong>Vorschlag</strong>.
+          info: Sie erstellen einen <strong>Frage</strong>.
         wizard_steps:
           current_step: Aktueller Schritt
           see_steps: siehe Schritte
-          step_1: Vorschlag erstellen
+          step_1: Frage erstellen
           step_2: Vergleichen
           step_3: Abschließen
-          step_4: Vorschlag veröffentlichen
+          step_4: Frage veröffentlichen
           step_of: Schritt %{current_step_num} von %{total_steps}
           title: Schritten zur Erstellung von Vorschlägen
       questions_picker:
-        choose_questions: Vorschläge auswählen
+        choose_questions: Fragen auswählen
         close: Schließen
-        more_questions: Es gibt %{number} weitere Vorschläge. Spezifizieren Sie Ihre Suche, um sie zu finden.
-        no_questions: Kein Vorschlag entspricht Ihren Suchkriterien oder es ist keine Vorschlag geplant.
+        more_questions: Es gibt %{number} weitere Fragen. Spezifizieren Sie Ihre Suche, um sie zu finden.
+        no_questions: Kein Frage entspricht Ihren Suchkriterien oder es ist keine Frage geplant.
       publish:
-        error: Beim Veröffentlichen des Vorschlags ist ein Fehler aufgetreten.
-        success: Vorschlag erfolgreich veröffentlicht.
+        error: Beim Veröffentlichen des Frages ist ein Fehler aufgetreten.
+        success: Frage erfolgreich veröffentlicht.
       publish_answers:
-        success: Vorschlagsantworten wurden erfolgreich veröffentlicht.
+        success: Fragesantworten wurden erfolgreich veröffentlicht.
       update:
-        error: Beim Speichern des Vorschlags ist ein Fehler aufgetreten.
-        success: Vorschlag wurde erfolgreich aktualisiert.
+        error: Beim Speichern des Frages ist ein Fehler aufgetreten.
+        success: Frage wurde erfolgreich aktualisiert.
       update_draft:
-        error: Beim Speichern des Vorschlagsentwurfs ist ein Fehler aufgetreten.
-        success: Der Vorschlagsentwurf wurde erfolgreich aktualisiert.
+        error: Beim Speichern des Fragesentwurfs ist ein Fehler aufgetreten.
+        success: Der Fragesentwurf wurde erfolgreich aktualisiert.
       versions:
         collaborative_drafts:
           back_to_resource: Kehren Sie zum gemeinsamen Entwurf zurück
         index:
           title: Versionen
         questions:
-          back_to_resource: Gehen Sie zurück zum Vorschlag
+          back_to_resource: Gehen Sie zurück zum Frage
       withdraw:
         errors:
-          has_supports: Dieser Vorschlag kann nicht zurückgezogen werden, da er bereits Unterstützung hat.
+          has_supports: Dieser Frage kann nicht zurückgezogen werden, da er bereits Unterstützung hat.
     resource_links:
       copied_from_component:
-        question_question: Ähnliche Vorschläge
+        question_question: Ähnliche Fragen
       included_projects:
         project_result: 'Ergebnisse, die in diesem Projekt erscheinen:'
       included_questions:
-        question_project: 'Vorschlag, der in diesen Projekten erscheint:'
-        question_result: 'Vorschlag erscheint in diesen Ergebnissen:'
+        question_project: 'Frage, der in diesen Projekten erscheint:'
+        question_result: 'Frage erscheint in diesen Ergebnissen:'

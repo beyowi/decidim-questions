@@ -24,14 +24,14 @@ it:
         state: Stato
         suggested_hashtags: Hashtag consigliati
         title: Titolo
-        user_group_id: Crea proposta come
+        user_group_id: Crea domanda come
       question_answer:
         answer: Risposta
       questions_copy:
-        copy_questions: Capisco che questo importerà tutte le proposte dal componente selezionato a quello corrente e che questa azione non può essere annullata.
-        origin_component_id: Componente per copiare le proposte da
+        copy_questions: Capisco che questo importerà tutte le domande dal componente selezionato a quello corrente e che questa azione non può essere annullata.
+        origin_component_id: Componente per copiare le domande da
       questions_import:
-        import_questions: Importa proposte
+        import_questions: Importa domande
         keep_authors: Mantieni gli autori originali
       valuation_assignment:
         admin_log:
@@ -52,24 +52,24 @@ it:
             title:
               identical: Il corpo AND non può essere identico
     models:
-      decidim/questions/accepted_question_event: Proposta accettata
-      decidim/questions/admin/update_question_category_event: Categoria della proposta modificata
-      decidim/questions/admin/update_question_scope_event: Scopo della proposta modificato
-      decidim/questions/creation_enabled_event: Creazione della proposta abilitata
-      decidim/questions/endorsing_enabled_event: Approvazione della proposta abilitata
-      decidim/questions/evaluating_question_event: La proposta è in corso di valutazione
-      decidim/questions/question_mentioned_event: Proposta menzionata
-      decidim/questions/publish_question_event: Proposta pubblicata
-      decidim/questions/rejected_question_event: Proposta respinta
-      decidim/questions/voting_enabled_event: Voto della proposta abilitato
+      decidim/questions/accepted_question_event: Domanda accettata
+      decidim/questions/admin/update_question_category_event: Categoria della domanda modificata
+      decidim/questions/admin/update_question_scope_event: Scopo della domanda modificato
+      decidim/questions/creation_enabled_event: Creazione della domanda abilitata
+      decidim/questions/endorsing_enabled_event: Approvazione della domanda abilitata
+      decidim/questions/evaluating_question_event: La domanda è in corso di valutazione
+      decidim/questions/question_mentioned_event: Domanda menzionata
+      decidim/questions/publish_question_event: Domanda pubblicata
+      decidim/questions/rejected_question_event: Domanda respinta
+      decidim/questions/voting_enabled_event: Voto della domanda abilitato
   activerecord:
     models:
       decidim/questions/collaborative_draft:
         one: Bozza collaborativa
         other: Bozze collaborative
       decidim/questions/question:
-        one: Proposta
-        other: proposte
+        one: Domanda
+        other: domande
       decidim/questions/question_note:
         one: Nota
         other: Gli appunti
@@ -92,7 +92,7 @@ it:
           endorse: Sostieni
           vote: Vota
           withdraw: Ritirare
-        name: Proposte
+        name: Domande
         settings:
           global:
             allow_card_image: Consenti l'immagine della scheda
@@ -106,45 +106,45 @@ it:
             comments_enabled: Commenti abilitati
             geocoding_enabled: Geocoding abilitato
             minimum_votes_per_user: Voti minimi per utente
-            new_question_body_template: Nuovo modello di testo della proposta
-            new_question_body_template_help: È possibile definire un testo precompilato che le nuove proposte avranno
-            new_question_help_text: Nuovo testo di aiuto per la proposta
-            official_questions_enabled: Proposte ufficiali abilitate
+            new_question_body_template: Nuovo modello di testo della domanda
+            new_question_body_template_help: È possibile definire un testo precompilato che le nuove domande avranno
+            new_question_help_text: Nuovo testo di aiuto per la domanda
+            official_questions_enabled: Domande ufficiali abilitate
             participatory_texts_enabled: Testi di partecipazione abilitati
-            participatory_texts_enabled_readonly: Non è possibile interagire con questa impostazione se ci sono proposte esistenti. Per favore, crea un nuovo componente `Proposte` se si desidera abilitare questa funzione o elimina tutte le proposte importate nel menu `Testi partecipativi` se si desidera disabilitarla.
-            question_answering_enabled: Risposta alla proposta abilitata
-            question_edit_before_minutes: Minuti dall'inserimento dopo i quali le proposte non potranno piùessere modificate dagli autori
-            question_length: Lunghezza massima della proposta
-            question_limit: Numero di proposte che possono essere create da ciascun utente
-            question_wizard_step_1_help_text: Procedura guidata proposta "Crea" testo guida passo
-            question_wizard_step_2_help_text: Procedura guidata di proposta "Confronta" il testo della guida del passo
-            question_wizard_step_3_help_text: Procedura guidata "Completa" del testo della guida guidata della proposta
+            participatory_texts_enabled_readonly: Non è possibile interagire con questa impostazione se ci sono domande esistenti. Per favore, crea un nuovo componente `Domande` se si desidera abilitare questa funzione o elimina tutte le domande importate nel menu `Testi partecipativi` se si desidera disabilitarla.
+            question_answering_enabled: Risposta alla domanda abilitata
+            question_edit_before_minutes: Minuti dall'inserimento dopo i quali le domande non potranno piùessere modificate dagli autori
+            question_length: Lunghezza massima della domanda
+            question_limit: Numero di domande che possono essere create da ciascun utente
+            question_wizard_step_1_help_text: Procedura guidata domanda "Crea" testo guida passo
+            question_wizard_step_2_help_text: Procedura guidata di domanda "Confronta" il testo della guida del passo
+            question_wizard_step_3_help_text: Procedura guidata "Completa" del testo della guida guidata della domanda
             question_wizard_step_4_help_text: Procedura guidata "Pubblica" del testo della guida per la procedura guidata
-            resources_permissions_enabled: Le autorizzazioni delle azioni possono essere impostate per ogni proposta
-            threshold_per_question: Voti necessari per l'approvazione della proposta
+            resources_permissions_enabled: Le autorizzazioni delle azioni possono essere impostate per ogni domanda
+            threshold_per_question: Voti necessari per l'approvazione della domanda
             vote_limit: Limite di voto per utente
           step:
             amendment_creation_enabled: Creazione di emendamenti abilitata
-            amendment_creation_enabled_help: I partecipanti possono modificare le proposte.
+            amendment_creation_enabled_help: I partecipanti possono modificare le domande.
             amendment_promotion_enabled: Promozione dell'emendamento abilitata
-            amendment_promotion_enabled_help: Gli autori dell'emendamento potranno pubblicare la proposta dell'emendamento respinto.
+            amendment_promotion_enabled_help: Gli autori dell'emendamento potranno pubblicare la domanda dell'emendamento respinto.
             amendment_reaction_enabled: Risposta all'emendamento abilitata
-            amendment_reaction_enabled_help: Gli autori della proposta potranno accettare o rifiutare le modifiche dei partecipanti.
+            amendment_reaction_enabled_help: Gli autori della domanda potranno accettare o rifiutare le modifiche dei partecipanti.
             amendments_visibility: Visibilità dell'emendamento
             amendments_visibility_choices:
               all: Gli emendamenti sono visibili a tutti
               participants: Gli emendamenti sono visibili solo ai loro autori
             amendments_visibility_help: Se viene selezionata l'opzione "Gli emendamenti sono visibili solo ai loro autori", il partecipante deve essere loggato per vedere gli emendamenti apportati.
             announcement: Annuncio
-            answers_with_costs: Abilita i costi sulle risposte proposte
-            automatic_hashtags: Hashtag aggiunti a tutte le proposte
+            answers_with_costs: Abilita i costi sulle risposte domande
+            automatic_hashtags: Hashtag aggiunti a tutte le domande
             comments_blocked: Commenti bloccati
-            creation_enabled: Creazione della proposta abilitata
+            creation_enabled: Creazione della domanda abilitata
             endorsements_blocked: Approvazioni bloccate
             endorsements_enabled: Approvazioni abilitate
-            question_answering_enabled: Risposta alla proposta abilitata
-            publish_answers_immediately: Pubblica immediatamente le risposte proposte
-            suggested_hashtags: Gli hashtag hanno suggerito agli utenti nuove proposte
+            question_answering_enabled: Risposta alla domanda abilitata
+            publish_answers_immediately: Pubblica immediatamente le risposte domande
+            suggested_hashtags: Gli hashtag hanno suggerito agli utenti nuove domande
             votes_blocked: Votazione bloccata
             votes_enabled: Voto abilitato
             votes_hidden: Voti nascosti (se i voti sono abilitati, controllando questo si nasconderà il numero di voti)
@@ -152,10 +152,10 @@ it:
       questions:
         admin:
           question_note_created:
-            email_intro: Qualcuno ha lasciato una nota sulla proposta%{resource_title}". Controllala al <a href="%{admin_question_info_url}">pannello di amministrazione</a>
-            email_outro: Hai ricevuto questa notifica perché puoi valutare la proposta.
-            email_subject: Qualcuno ha lasciato una nota sulla proposta %{resource_title}.
-            notification_title: Qualcuno ha lasciato una nota sulla proposta <a href="%{resource_path}">%{resource_title}</a>. Controllala presso <a href="%{admin_question_info_path}">il pannello di amministrazione</a>
+            email_intro: Qualcuno ha lasciato una nota sulla domanda%{resource_title}". Controllala al <a href="%{admin_question_info_url}">pannello di amministrazione</a>
+            email_outro: Hai ricevuto questa notifica perché puoi valutare la domanda.
+            email_subject: Qualcuno ha lasciato una nota sulla domanda %{resource_title}.
+            notification_title: Qualcuno ha lasciato una nota sulla domanda <a href="%{resource_path}">%{resource_title}</a>. Controllala presso <a href="%{admin_question_info_path}">il pannello di amministrazione</a>
         collaborative_draft_access_accepted:
           email_intro: '%{requester_name} è stato accettato per accedere come collaboratore al progetto collaborativo <a href="%{resource_path}">%{resource_title}</a>.'
           email_outro: Hai ricevuto questa notifica perché sei un collaboratore di <a href="%{resource_path}">%{resource_title}</a>.
@@ -187,155 +187,157 @@ it:
           email_subject: "%{author_name} %{author_nickname} ritirato il %{resource_title} progetto di collaborazione."
           notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> <strong>ritirato</strong> il <a href="%{resource_path}">%{resource_title}</a> progetto collaborativo.
         creation_enabled:
-          email_intro: 'Ora puoi creare nuove proposte in %{participatory_space_title}! Inizia a partecipare a questa pagina:'
+          email_intro: 'Ora puoi creare nuove domande in %{participatory_space_title}! Inizia a partecipare a questa pagina:'
           email_outro: Hai ricevuto questa notifica perché stai seguendo %{participatory_space_title}. È possibile interrompere la ricezione di notifiche facendo click su pulsante Smetti di seguire nella pagina del processo che stai seguendo.
-          email_subject: Proposte ora disponibili in %{participatory_space_title}
-          notification_title: Ora puoi proporre <a href="%{resource_path}">nuove proposte</a> in <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          email_subject: Domande ora disponibili in %{participatory_space_title}
+          notification_title: Ora puoi proporre <a href="%{resource_path}">nuove domande</a> in <a href="%{participatory_space_url}">%{participatory_space_title}</a>
         endorsing_enabled:
-          email_intro: 'Puoi sostenere proposte in %{participatory_space_title}! Inizia a partecipare a questa pagina:'
+          email_intro: 'Puoi sostenere domande in %{participatory_space_title}! Inizia a partecipare a questa pagina:'
           email_outro: Hai ricevuto questa notifica perché stai seguendo %{participatory_space_title}. È possibile interrompere la ricezione di notifiche facendo click su pulsante Smetti di seguire nella pagina del processo che stai seguendo.
-          email_subject: L'approvazione delle proposte è iniziata per %{participatory_space_title}
-          notification_title: È ora possibile avviare <a href="%{resource_path}">proposte di approvazione</a> in <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          email_subject: L'approvazione delle domande è iniziata per %{participatory_space_title}
+          notification_title: È ora possibile avviare <a href="%{resource_path}">domande di approvazione</a> in <a href="%{participatory_space_url}">%{participatory_space_title}</a>
         question_accepted:
           affected_user:
-            email_intro: 'La tua proposta "%{resource_title}" è stata accettata. Puoi leggere la risposta in questa pagina:'
+            email_intro: 'La tua domanda "%{resource_title}" è stata accettata. Puoi leggere la risposta in questa pagina:'
             email_outro: Hai ricevuto questa notifica perché sei un autore di "%{resource_title}".
-            email_subject: La tua proposta è stata accettata
-            notification_title: La tua proposta <a href="%{resource_path}">%{resource_title}</a> è stata accettata.
+            email_subject: La tua domanda è stata accettata
+            notification_title: La tua domanda <a href="%{resource_path}">%{resource_title}</a> è stata accettata.
           follower:
-            email_intro: 'La proposta "%{resource_title}" è stata accettata. Puoi leggere la risposta in questa pagina:'
+            email_intro: 'La domanda "%{resource_title}" è stata accettata. Puoi leggere la risposta in questa pagina:'
             email_outro: Hai ricevuto questa notifica perché stai seguendo "%{resource_title}". Puoi smettere di seguirlo dal link precedente.
-            email_subject: Una proposta che stai seguendo è stata accettata
-            notification_title: La proposta <a href="%{resource_path}">%{resource_title}</a> è stata accettata.
+            email_subject: Una domanda che stai seguendo è stata accettata
+            notification_title: La domanda <a href="%{resource_path}">%{resource_title}</a> è stata accettata.
         question_evaluating:
           affected_user:
-            email_intro: 'La tua proposta "%{resource_title}" è attualmente in fase di valutazione. Puoi trovare una risposta in questa pagina:'
+            email_intro: 'La tua domanda "%{resource_title}" è attualmente in fase di valutazione. Puoi trovare una risposta in questa pagina:'
             email_outro: Hai ricevuto questa notifica perché sei un autore di "%{resource_title}".
-            email_subject: La tua proposta è in corso di valutazione
-            notification_title: La tua proposta <a href="%{resource_path}">%{resource_title}</a> è in fase di valutazione.
+            email_subject: La tua domanda è in corso di valutazione
+            notification_title: La tua domanda <a href="%{resource_path}">%{resource_title}</a> è in fase di valutazione.
           follower:
-            email_intro: 'La proposta "%{resource_title}" è attualmente in fase di valutazione. Puoi trovare una risposta in questa pagina:'
+            email_intro: 'La domanda "%{resource_title}" è attualmente in fase di valutazione. Puoi trovare una risposta in questa pagina:'
             email_outro: Hai ricevuto questa notifica perché stai seguendo "%{resource_title}". Puoi smettere di seguirlo dal link precedente.
-            email_subject: Una proposta che stai seguendo è in corso di valutazione
-            notification_title: La proposta <a href="%{resource_path}">%{resource_title}</a> è in fase di valutazione.
+            email_subject: Una domanda che stai seguendo è in corso di valutazione
+            notification_title: La domanda <a href="%{resource_path}">%{resource_title}</a> è in fase di valutazione.
         question_mentioned:
-          email_intro: La tua proposta%{mentioned_question_title}" è stata menzionata <a href="%{resource_url}">in questo spazio</a> nei commenti.
+          email_intro: La tua domanda%{mentioned_question_title}" è stata menzionata <a href="%{resource_url}">in questo spazio</a> nei commenti.
           email_outro: Hai ricevuto questa notifica perché sei un autore di "%{resource_title}".
-          email_subject: La tua proposta "%{mentioned_question_title}" è stata menzionata
-          notification_title: La tua proposta "%{mentioned_question_title}" è stata menzionata <a href="%{resource_path}">in questo spazio</a> nei commenti.
+          email_subject: La tua domanda "%{mentioned_question_title}" è stata menzionata
+          notification_title: La tua domanda "%{mentioned_question_title}" è stata menzionata <a href="%{resource_path}">in questo spazio</a> nei commenti.
         question_published:
-          email_intro: '%{author_name} %{author_nickname}, chi stai seguendo, ha pubblicato una nuova proposta denominata "%{resource_title}". Dai un''occhiata e dai:'
+          email_intro: '%{author_name} %{author_nickname}, chi stai seguendo, ha pubblicato una nuova domanda denominata "%{resource_title}". Dai un''occhiata e dai:'
           email_outro: Hai ricevuto questa notifica perché stai seguendo %{author_nickname}. È possibile interrompere la ricezione di notifiche seguendo il collegamento precedente.
-          email_subject: Nuova proposta "%{resource_title}" di %{author_nickname}
-          notification_title: La <a href="%{resource_path}">%{resource_title}</a> proposta è stata pubblicata da <a href="%{author_path}">%{author_name} %{author_nickname}</a>.
+          email_subject: Nuova domanda "%{resource_title}" di %{author_nickname}
+          notification_title: La <a href="%{resource_path}">%{resource_title}</a> domanda è stata pubblicata da <a href="%{author_path}">%{author_name} %{author_nickname}</a>.
         question_published_for_space:
-          email_intro: La proposta "%{resource_title}" è stata aggiunta a "%{participatory_space_title}" che stai seguendo.
+          email_intro: La domanda "%{resource_title}" è stata aggiunta a "%{participatory_space_title}" che stai seguendo.
           email_outro: Hai ricevuto questa notifica perché stai seguendo "%{participatory_space_title}". Puoi smettere di seguirlo dal link precedente.
-          email_subject: Nuova proposta "%{resource_title}" aggiunta a %{participatory_space_title}
-          notification_title: La proposta <a href="%{resource_path}">%{resource_title}</a> è stata aggiunta a %{participatory_space_title}
+          email_subject: Nuova domanda "%{resource_title}" aggiunta a %{participatory_space_title}
+          notification_title: La domanda <a href="%{resource_path}">%{resource_title}</a> è stata aggiunta a %{participatory_space_title}
         question_rejected:
           affected_user:
-            email_intro: 'La tua proposta "%{resource_title}" è stata respinta. Puoi leggere la risposta in questa pagina:'
+            email_intro: 'La tua domanda "%{resource_title}" è stata respinta. Puoi leggere la risposta in questa pagina:'
             email_outro: Hai ricevuto questa notifica perché sei un autore di "%{resource_title}".
-            email_subject: La tua proposta è stata respinta
-            notification_title: La tua proposta <a href="%{resource_path}">%{resource_title}</a> è stata respinta.
+            email_subject: La tua domanda è stata respinta
+            notification_title: La tua domanda <a href="%{resource_path}">%{resource_title}</a> è stata respinta.
           follower:
-            email_intro: 'La proposta "%{resource_title}" è stata respinta. Puoi leggere la risposta in questa pagina:'
+            email_intro: 'La domanda "%{resource_title}" è stata respinta. Puoi leggere la risposta in questa pagina:'
             email_outro: Hai ricevuto questa notifica perché stai seguendo "%{resource_title}". Puoi smettere di seguirlo dal link precedente.
-            email_subject: Una proposta che stai seguendo è stata respinta
-            notification_title: La proposta <a href="%{resource_path}">%{resource_title}</a> è stata respinta.
+            email_subject: Una domanda che stai seguendo è stata respinta
+            notification_title: La domanda <a href="%{resource_path}">%{resource_title}</a> è stata respinta.
         question_update_category:
-          email_intro: 'Un amministratore ha aggiornato la categoria della tua proposta "%{resource_title}", dai un''occhiata:'
-          email_outro: Hai ricevuto questa notifica perché sei l'autore della proposta.
-          email_subject: La categoria di proposta %{resource_title} è stata aggiornata
-          notification_title: La categoria <a href="%{resource_path}">%{resource_title}</a> proposta è stata aggiornata da un amministratore.
+          email_intro: 'Un amministratore ha aggiornato la categoria della tua domanda "%{resource_title}", dai un''occhiata:'
+          email_outro: Hai ricevuto questa notifica perché sei l'autore della domanda.
+          email_subject: La categoria di domanda %{resource_title} è stata aggiornata
+          notification_title: La categoria <a href="%{resource_path}">%{resource_title}</a> domanda è stata aggiornata da un amministratore.
         question_update_scope:
-          email_intro: 'Un amministratore ha aggiornato l''ambito della tua proposta%{resource_title}", dai un''occhiata a questa pagina:'
-          email_outro: Hai ricevuto questa notifica perché sei l'autore della proposta.
-          email_subject: L'ambito della proposta %{resource_title} è stato aggiornato
-          notification_title: L'ambito della proposta <a href="%{resource_path}">%{resource_title}</a> è stato aggiornato da un amministratore.
+          email_intro: 'Un amministratore ha aggiornato l''ambito della tua domanda%{resource_title}", dai un''occhiata a questa pagina:'
+          email_outro: Hai ricevuto questa notifica perché sei l'autore della domanda.
+          email_subject: L'ambito della domanda %{resource_title} è stato aggiornato
+          notification_title: L'ambito della domanda <a href="%{resource_path}">%{resource_title}</a> è stato aggiornato da un amministratore.
         voting_enabled:
-          email_intro: 'Puoi votare le proposte in %{participatory_space_title}! Inizia a partecipare a questa pagina:'
+          email_intro: 'Puoi votare le domande in %{participatory_space_title}! Inizia a partecipare a questa pagina:'
           email_outro: Hai ricevuto questa notifica perché stai seguendo %{participatory_space_title}. È possibile interrompere la ricezione di notifiche facendo clich su pulsante Smetti di seguire nella pagina del processo o del contenuto che stai seguendo.
-          email_subject: Il voto delle proposte è iniziato per %{participatory_space_title}
-          notification_title: Ora puoi iniziare <a href="%{resource_path}">proposte di voto</a> in <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          email_subject: Il voto delle domande è iniziato per %{participatory_space_title}
+          notification_title: Ora puoi iniziare <a href="%{resource_path}">domande di voto</a> in <a href="%{participatory_space_url}">%{participatory_space_title}</a>
     gamification:
       badges:
         accepted_questions:
           conditions:
-            - Scegli lo spazio di partecipazione di tuo interesse con l'invio per le proposte abilitate
-            - Prova a fare proposte che possono essere eseguite. In questo modo è più probabile che vengano accettati.
-          description: Questo badge è concesso quando partecipi attivamente a nuove proposte e queste sono accettate.
-          description_another: Questo utente ha ottenuto %{score} proposte accettate.
-          description_own: Hai accettato %{score} proposte.
-          name: Proposte accettate
-          next_level_in: Ricevi altre %{score} proposte accettate per raggiungere il livello successivo!
-          unearned_another: Questo utente non ha ancora accettato alcuna proposta.
-          unearned_own: Non hai ancora accettato nessuna proposta.
+            - Scegli lo spazio di partecipazione di tuo interesse con l'invio per le domande abilitate
+            - Prova a fare domande che possono essere eseguite. In questo modo è più probabile che vengano accettati.
+          description: Questo badge è concesso quando partecipi attivamente a nuove domande e queste sono accettate.
+          description_another: Questo utente ha ottenuto %{score} domande accettate.
+          description_own: Hai accettato %{score} domande.
+          name: Domande accettate
+          next_level_in: Ricevi altre %{score} domande accettate per raggiungere il livello successivo!
+          unearned_another: Questo utente non ha ancora accettato alcuna domanda.
+          unearned_own: Non hai ancora accettato nessuna domanda.
         question_votes:
           conditions:
-            - Naviga e passa un po 'di tempo a leggere le proposte di altre persone
-            - Dare supporto alle proposte che ti piacciono o che ti interessano
-          description: Questo badge è concesso quando supporti le proposte di altre persone.
-          description_another: Questo utente ha fornito supporto a %{score} proposte.
-          description_own: Hai dato supporto a %{score} proposte.
-          name: Supporti della proposta
-          next_level_in: Dare supporto a %{score} ulteriori proposte per raggiungere il livello successivo!
-          unearned_another: Questo utente non ha ancora fornito supporto a nessuna proposta.
-          unearned_own: Hai dato supporto a proposte.
+            - Naviga e passa un po 'di tempo a leggere le domande di altre persone
+            - Dare supporto alle domande che ti piacciono o che ti interessano
+          description: Questo badge è concesso quando supporti le domande di altre persone.
+          description_another: Questo utente ha fornito supporto a %{score} domande.
+          description_own: Hai dato supporto a %{score} domande.
+          name: Supporti della domanda
+          next_level_in: Dare supporto a %{score} ulteriori domande per raggiungere il livello successivo!
+          unearned_another: Questo utente non ha ancora fornito supporto a nessuna domanda.
+          unearned_own: Hai dato supporto a domande.
         questions:
           conditions:
-            - Scegli lo spazio di partecipazione di tuo interesse con l'invio per le proposte abilitate
-            - Crea una nuova proposta
-          description: Questo badge è concesso quando partecipi attivamente a nuove proposte.
-          description_another: Questo utente ha creato %{score} proposte.
-          description_own: Hai creato %{score} proposte.
-          name: Proposte
-          next_level_in: Crea altre %{score} proposte per raggiungere il livello successivo!
-          unearned_another: Questo utente non ha ancora creato alcuna proposta.
-          unearned_own: Non hai ancora creato alcuna proposta.
+            - Scegli lo spazio di partecipazione di tuo interesse con l'invio per le domande abilitate
+            - Crea una nuova domanda
+          description: Questo badge è concesso quando partecipi attivamente a nuove domande.
+          description_another: Questo utente ha creato %{score} domande.
+          description_own: Hai creato %{score} domande.
+          name: Domande
+          next_level_in: Crea altre %{score} domande per raggiungere il livello successivo!
+          unearned_another: Questo utente non ha ancora creato alcuna domanda.
+          unearned_own: Non hai ancora creato alcuna domanda.
     metrics:
       accepted_questions:
-        description: Numero di proposte accettate dagli utenti
-        object: proposte
-        title: Proposte accettate
+        description: Numero di domande accettate dagli utenti
+        object: domande
+        title: Domande accettate
       endorsements:
-        description: Numero di approvazioni generate nelle proposte
+        description: Numero di approvazioni generate nelle domande
         object: Mi piace
         title: Mi piace
       questions:
-        description: Numero di proposte generate
-        object: proposte
-        title: proposte
+        description: Numero di domande generate
+        object: domande
+        title: domande
       votes:
-        description: Numero di voti generati nelle proposte degli utenti
+        description: Numero di voti generati nelle domande degli utenti
         object: voti
         title: Voti
     participatory_processes:
       participatory_process_groups:
         highlighted_questions:
-          questions: proposte
+          questions: domande
+      statistics:
+        questions_count: domande
     participatory_spaces:
       highlighted_questions:
         see_all: Vedi tutto (%{count})
     questions:
       actions:
-        answer_question: Proposta di Risposta
-        edit_question: Modifica proposta
+        answer_question: Domanda di Risposta
+        edit_question: Modifica domanda
         import: Importa da un altro componente
-        new: Nuova proposta
+        new: Nuova domanda
         participatory_texts: Testi partecipativi
-        show: Mostra proposta
+        show: Mostra domanda
         title: Azioni
       admin:
         actions:
           preview: Anteprima
         exports:
           comments: Commenti
-          questions: Proposte
+          questions: Domande
         models:
           question:
-            name: Proposta
+            name: Domanda
         participatory_texts:
           bulk-actions:
             are_you_sure: Sei sicuro di scartare l'intera bozza del testo partecipativo?
@@ -346,9 +348,9 @@ it:
           import:
             invalid: Il modulo non è valido!
             invalid_file: Il file contiene alcuni errori. Prova a modificare il contenuto del file e caricarlo nuovamente.
-            success: Complimenti, le seguenti sezioni sono state analizzate dal documento importato, sono state convertite in proposte. Ora puoi rivedere e regolare qualsiasi cosa tu abbia bisogno prima di pubblicare.
+            success: Complimenti, le seguenti sezioni sono state analizzate dal documento importato, sono state convertite in domande. Ora puoi rivedere e regolare qualsiasi cosa tu abbia bisogno prima di pubblicare.
           index:
-            info_1: Le seguenti sezioni sono state analizzate dal documento importato, sono state convertite in proposte. Ora puoi rivedere e regolare qualsiasi cosa tu abbia bisogno prima di pubblicare.
+            info_1: Le seguenti sezioni sono state analizzate dal documento importato, sono state convertite in domande. Ora puoi rivedere e regolare qualsiasi cosa tu abbia bisogno prima di pubblicare.
             publish_document: Pubblica un documento
             save_draft: Salva la bozza
             title: ANTEPRIMA DEL TESTO PARTECIPATIVO
@@ -357,12 +359,12 @@ it:
               md: .md
               odt: odt
             bottom_hint: "(Sarai in grado di visualizzare in anteprima e ordinare le sezioni del documento)"
-            document_legend: 'Aggiungi un documento inferiore a 2 MB, ciascuna sezione fino a quando non verranno analizzati 3 livelli in Proposte. I formati supportati sono: %{valid_mime_types}'
+            document_legend: 'Aggiungi un documento inferiore a 2 MB, ciascuna sezione fino a quando non verranno analizzati 3 livelli in Domande. I formati supportati sono: %{valid_mime_types}'
             title: AGGIUNGI DOCUMENTO
             upload_document: Carica il documento
           publish:
-            invalid: Impossibile pubblicare proposte
-            success: Tutte le proposte sono state pubblicate
+            invalid: Impossibile pubblicare domande
+            success: Tutte le domande sono state pubblicate
           sections:
             article: "<em>Articolo</em>"
             section: "<em>Sezione:</em> <strong>%{title}</strong>"
@@ -375,11 +377,11 @@ it:
             answer_question: Risposta
             evaluating: Valutare
             rejected: Rifiutata
-            title: Risposta per la proposta %{title}
+            title: Risposta per la domanda %{title}
         question_notes:
           create:
-            error: Si è verificato un problema durante la creazione di questa nota di proposta
-            success: Nota della proposta creata con successo
+            error: Si è verificato un problema durante la creazione di questa nota di domanda
+            success: Nota della domanda creata con successo
           form:
             note: Nota
             submit: Invia
@@ -387,17 +389,17 @@ it:
           title: Note private
         questions:
           answer:
-            invalid: E' stato riscontrato un problema nella risposta per questa proposta
-            success: OK, risposta per la proposta registrata.
+            invalid: E' stato riscontrato un problema nella risposta per questa domanda
+            success: OK, risposta per la domanda registrata.
           create:
-            invalid: Sono stati riscontrati dei problemi durante la creazione di questa proposta
-            success: OK, proposta creata.
+            invalid: Sono stati riscontrati dei problemi durante la creazione di questa domanda
+            success: OK, domanda creata.
           edit:
-            title: Aggiorna proposta
+            title: Aggiorna domanda
             update: Aggiornare
           form:
             attachment_legend: "(Opzionale) Aggiungere un allegato"
-            created_in_meeting: Questa proposta proviene da una riunione
+            created_in_meeting: Questa domanda proviene da una riunione
             select_a_category: Scegli una categoria
             select_a_meeting: Seleziona una riunione
           index:
@@ -413,19 +415,19 @@ it:
             publish_answers: Pubblica risposte
             select_component: Seleziona un componente
             selected: selezionato
-            split: Proposte divise
+            split: Domande divise
             split_button: Diviso
-            title: Proposte
+            title: Domande
             unassign_from_valuator: Annulla assegnazione al valutatore
             unassign_from_valuator_button: Disassegna
             update: Aggiornare
             update_scope_button: Aggiorna Ambito
           new:
             create: Crea
-            title: Crea una proposta
+            title: Crea una domanda
           publish_answers:
-            number_of_questions: Le risposte per %{number} proposte saranno pubblicate.
-            select_a_question: Si prega di selezionare una proposta
+            number_of_questions: Le risposte per %{number} domande saranno pubblicate.
+            select_a_question: Si prega di selezionare una domanda
           show:
             amendments_count: Numero di emendamenti
             assigned_valuators: Valutatori assegnati
@@ -445,59 +447,59 @@ it:
               one: e 1 altro
               other: e altri %{count}
             photos: Foto
-            questions: proposte
+            questions: domande
             ranking: "%{ranking} di %{total}"
             related_meetings: Riunioni correlate
             remove_assignment: Rimuovi assegnazione
-            remove_assignment_confirmation: Sei sicuro di voler rimuovere il valutatore da questa proposta?
+            remove_assignment_confirmation: Sei sicuro di voler rimuovere il valutatore da questa domanda?
             valuators: Valutatori
             votes_count: Contare i voti
             votes_ranking: Ordina per numero di supporti
           update_category:
-            invalid: 'Queste proposte avevano già la categoria %{subject_name} %{questions}.'
+            invalid: 'Queste domande avevano già la categoria %{subject_name} %{questions}.'
             select_a_category: Si prega di selezionare una categoria
-            select_a_question: Si prega di selezionare una proposta
-            success: 'Proposte aggiornate con successo alla categoria %{subject_name}: %{questions}.'
+            select_a_question: Si prega di selezionare una domanda
+            success: 'Domande aggiornate con successo alla categoria %{subject_name}: %{questions}.'
           update_scope:
-            invalid: 'Queste proposte avevano già il campo di applicazione %{subject_name} %{questions}.'
-            select_a_question: Si prega di selezionare una proposta
+            invalid: 'Queste domande avevano già il campo di applicazione %{subject_name} %{questions}.'
+            select_a_question: Si prega di selezionare una domanda
             select_a_scope: Seleziona un ambito
-            success: 'Proposte aggiornate con successo all''ambito %{subject_name}: %{questions}.'
+            success: 'Domande aggiornate con successo all''ambito %{subject_name}: %{questions}.'
         questions_imports:
           create:
-            invalid: C'è stato un problema nell'importazione delle proposte
-            success: "%{number} proposte importate con successo"
+            invalid: C'è stato un problema nell'importazione delle domande
+            success: "%{number} domande importate con successo"
           new:
-            create: Importa proposte
-            no_components: Non ci sono altri componenti di proposta in questo spazio partecipativo per importare le proposte da.
+            create: Importa domande
+            no_components: Non ci sono altri componenti di domanda in questo spazio partecipativo per importare le domande da.
             select_component: Si prega di selezionare un componente
-            select_states: Controlla gli stati delle proposte da importare
+            select_states: Controlla gli stati delle domande da importare
         questions_merges:
           create:
-            invalid: Si è verificato un errore durante l'unione delle proposte selezionate.
-            success: Fuse con successo le proposte in una nuova.
+            invalid: Si è verificato un errore durante l'unione delle domande selezionate.
+            success: Fuse con successo le domande in una nuova.
         questions_splits:
           create:
-            invalid: Si è verificato un errore durante la divisione delle proposte selezionate.
-            success: Suddiviso con successo le proposte in nuove.
+            invalid: Si è verificato un errore durante la divisione delle domande selezionate.
+            success: Suddiviso con successo le domande in nuove.
         valuation_assignments:
           create:
-            invalid: Si è verificato un errore assegnando le proposte ad un valutatore
-            success: Proposte assegnate ad un valutatore con successo
+            invalid: Si è verificato un errore assegnando le domande ad un valutatore
+            success: Domande assegnate ad un valutatore con successo
           delete:
-            invalid: Errore durante la cancellazione delle proposte da parte di un valutatore
-            success: Valutatore disassegnato dalle proposte con successo
+            invalid: Errore durante la cancellazione delle domande da parte di un valutatore
+            success: Valutatore disassegnato dalle domande con successo
       admin_log:
         question:
-          answer: "%{user_name} ha risposto alla proposta %{resource_name} sullo spazio %{space_name}"
-          create: "%{user_name} ha creato la proposta %{resource_name} nello spazio %{space_name} come proposta ufficiale"
-          publish_answer: "%{user_name} ha pubblicato la risposta alla proposta %{resource_name} sullo spazio %{space_name}"
-          update: "%{user_name} aggiornato la %{resource_name} proposta ufficiale sul %{space_name} spazio"
+          answer: "%{user_name} ha risposto alla domanda %{resource_name} sullo spazio %{space_name}"
+          create: "%{user_name} ha creato la domanda %{resource_name} nello spazio %{space_name} come domanda ufficiale"
+          publish_answer: "%{user_name} ha pubblicato la risposta alla domanda %{resource_name} sullo spazio %{space_name}"
+          update: "%{user_name} aggiornato la %{resource_name} domanda ufficiale sul %{space_name} spazio"
         question_note:
-          create: "%{user_name} ha lasciato una nota privata sulla proposta %{resource_name} sullo spazio %{space_name}"
+          create: "%{user_name} ha lasciato una nota privata sulla domanda %{resource_name} sullo spazio %{space_name}"
         valuation_assignment:
-          create: "%{user_name} ha assegnato la proposta %{resource_name} ad un valutatore"
-          delete: "%{user_name} ha rimosso l'assegnazione di un valutatore alla proposta %{question_title}"
+          create: "%{user_name} ha assegnato la domanda %{resource_name} ad un valutatore"
+          delete: "%{user_name} ha rimosso l'assegnazione di un valutatore alla domanda %{question_title}"
       answers:
         accepted: Accettata
         evaluating: Valutare
@@ -524,17 +526,17 @@ it:
         filter_type_values:
           all: Tutti
           amendments: Modifiche
-          questions: proposte
+          questions: domande
       collaborative_drafts:
         collaborative_draft:
           publish:
             error: Si sono verificati errori durante la pubblicazione della bozza collaborativa.
             irreversible_action_modal:
-              body: Dopo aver pubblicato la bozza come proposta, la bozza non sarà più modificabile. La proposta non accetterà nuovi autori o contributi.
+              body: Dopo aver pubblicato la bozza come domanda, la bozza non sarà più modificabile. La domanda non accetterà nuovi autori o contributi.
               cancel: Annulla
-              ok: Pubblica come proposta
+              ok: Pubblica come domanda
               title: La seguente azione è irreversibile
-            success: Bozza collaborativa pubblicata con successo come proposta.
+            success: Bozza collaborativa pubblicata con successo come domanda.
           view_collaborative_draft: Visualizza bozza collaborativa
           withdraw:
             error: Ci sono stati errori nel chiudere la bozza collaborativa.
@@ -607,18 +609,18 @@ it:
         show:
           back: Indietro
           edit: Modifica bozza collaborativa
-          final_question: proposta finale
-          final_question_help_text: Questa bozza è finita. Puoi vedere la proposta finale finale
+          final_question: domanda finale
+          final_question_help_text: Questa bozza è finita. Puoi vedere la domanda finale finale
           hidden_authors_count:
             one: e %{count} altra persona
             other: e altre %{count} persone
-          info-message: Si tratta di un <strong>progetto collaborativo</strong> per una proposta. Ciò significa che puoi aiutare i loro autori a modellare la proposta utilizzando la sezione dei commenti qui sotto o migliorarla direttamente richiedendo l'accesso per modificarla. Una volta che gli autori ti concederanno l'accesso, sarai in grado di apportare modifiche a questa bozza.
+          info-message: Si tratta di un <strong>progetto collaborativo</strong> per una domanda. Ciò significa che puoi aiutare i loro autori a modellare la domanda utilizzando la sezione dei commenti qui sotto o migliorarla direttamente richiedendo l'accesso per modificarla. Una volta che gli autori ti concederanno l'accesso, sarai in grado di apportare modifiche a questa bozza.
           publish: Pubblica
           publish_info: Pubblica questa versione della bozza o
-          published_question: proposta pubblicata
+          published_question: domanda pubblicata
           request_access: Richiesta di accesso
           requested_access: Accesso richiesto
-          version_history: vedere la cronologia delle versioni per questa proposta
+          version_history: vedere la cronologia delle versioni per questa domanda
           withdraw: ritirare la bozza
         states:
           open: Aperto
@@ -645,13 +647,13 @@ it:
           step_of: Passaggio %{current_step_num} di %{total_steps}
           title: Fasi di creazione bozza collaborativa
       create:
-        error: C'è stato un errore durante il salvataggio di questa proposta.
-        success: Proposta creata con successo. Salvato come bozza.
+        error: C'è stato un errore durante il salvataggio di questa domanda.
+        success: Domanda creata con successo. Salvato come bozza.
       destroy_draft:
-        error: Si sono verificati errori durante l'eliminazione della bozza della proposta.
-        success: La bozza della proposta è stata cancellata con successo.
+        error: Si sono verificati errori durante l'eliminazione della bozza della domanda.
+        success: La bozza della domanda è stata cancellata con successo.
       last_activity:
-        new_question_at_html: "<span>Nuova proposta al %{link}</span>"
+        new_question_at_html: "<span>Nuova domanda al %{link}</span>"
       models:
         collaborative_draft:
           fields:
@@ -664,7 +666,7 @@ it:
             comments: Commenti
             id: ID
             notes: Gli appunti
-            official_question: Proposta dell'Amministrazione
+            official_question: Domanda dell'Amministrazione
             published_answer: Risposta pubblicata
             published_at: Pubblicato a
             scope: Visibilità
@@ -674,7 +676,7 @@ it:
             valuators: Valutatori
             votes: Voti
       new:
-        limit_reached: Non è possibile creare nuove proposte dal momento che hai superato il limite.
+        limit_reached: Non è possibile creare nuove domande dal momento che hai superato il limite.
       participatory_text_question:
         alternative_title: Al momento non ci sono testi di partecipazione
         buttons:
@@ -683,36 +685,36 @@ it:
           comments: Commenti
       question_votes:
         create:
-          error: Ci sono stati errori durante la votazione della proposta.
+          error: Ci sono stati errori durante la votazione della domanda.
       questions:
         compare:
           continue: Prosegui
-          no_similars_found: Molto bene! Non sono state trovate proposte simili
-          title: Proposte simili
+          no_similars_found: Molto bene! Non sono state trovate domande simili
+          title: Domande simili
         complete:
           send: Inviare
-          title: Completa la tua proposta
+          title: Completa la tua domanda
         count:
           questions_count:
-            one: "%{count} proposta"
-            other: "%{count} proposte"
+            one: "%{count} domanda"
+            other: "%{count} domande"
         edit:
           attachment_legend: "(Opzionale) Aggiungi un allegato"
           back: Indietro
           select_a_category: Seleziona una categoria
           send: Inviare
-          title: Modifica la proposta
+          title: Modifica la domanda
         edit_draft:
           discard: Scarta questa bozza
-          discard_confirmation: Sei sicuro di voler eliminare questa bozza di proposta?
+          discard_confirmation: Sei sicuro di voler eliminare questa bozza di domanda?
           send: Anteprima
-          title: Modifica bozza di proposta
+          title: Modifica bozza di domanda
         filters:
           activity: La mia attività
           all: Tutti
           amendment_type: genere
           category: Categoria
-          my_questions: Le mie proposte
+          my_questions: Le mie domande
           origin: Origine
           related_to: Associata a
           scope: Scopo
@@ -727,18 +729,18 @@ it:
           unfold: Espandi
         index:
           collaborative_drafts_list: Accedi alle bozze di collaborazione
-          new_question: Nuova proposta
-          see_all_withdrawn: Vedi tutte le proposte ritirate
-          view_question: Visualizza proposta
+          new_question: Nuova domanda
+          see_all_withdrawn: Vedi tutte le domande ritirate
+          view_question: Visualizza domanda
         linked_questions:
           question_votes:
             one: voto
             other: voti
         new:
           send: Continua
-          title: Crea la tua proposta
+          title: Crea la tua domanda
         orders:
-          label: 'Ordina le proposte per:'
+          label: 'Ordina le domande per:'
           most_commented: I più commentati
           most_endorsed: I più approvati
           most_followed: I più seguiti
@@ -752,49 +754,49 @@ it:
           view_index:
             see_index: Vedi indice
         preview:
-          modify: Modifica la proposta
+          modify: Modifica la domanda
           question_edit_before_minutes:
-            one: Sarai in grado di modificare questa proposta durante il primo minuto dopo la pubblicazione della proposta. Una volta passato questo periodo, non sarai più in grado di modificare la proposta.
-            other: Potrai modificare questa proposta durante i primi %{count} minuti dopo la pubblicazione della proposta. Una volta passato questo periodo, non sarai più in grado di modificare la proposta.
+            one: Sarai in grado di modificare questa domanda durante il primo minuto dopo la pubblicazione della domanda. Una volta passato questo periodo, non sarai più in grado di modificare la domanda.
+            other: Potrai modificare questa domanda durante i primi %{count} minuti dopo la pubblicazione della domanda. Una volta passato questo periodo, non sarai più in grado di modificare la domanda.
           publish: Pubblica
-          title: Pubblica la tua proposta
+          title: Pubblica la tua domanda
         question:
           creation_date: 'Creazione: %{date}'
-          view_question: Visualizza la proposta
+          view_question: Visualizza la domanda
         questions:
-          empty: Non c'è ancora nessuna proposta
-          empty_filters: Non c'è alcuna proposta con questo criterio
+          empty: Non c'è ancora nessuna domanda
+          empty_filters: Non c'è alcuna domanda con questo criterio
         show:
           answer: Risposta
           back_to: Torna a
           back_to_list: Torna alla lista
           changes_at_title: Modifica a "%{title}"
           comments: Commenti
-          edit_question: Modifica la proposta
+          edit_question: Modifica la domanda
           endorsements_list: Elenco dei sostenitori
           estimated_cost: Costo stimato
           hidden_endorsers_count:
             one: e %{count} altra persona
             other: e altre %{count} persone
-          link_to_collaborative_draft_help_text: Questa proposta è il risultato di una bozza di collaborazione. Rivedere la storia
+          link_to_collaborative_draft_help_text: Questa domanda è il risultato di una bozza di collaborazione. Rivedere la storia
           link_to_collaborative_draft_text: Vedi la bozza collaborativa
-          link_to_promoted_emendation_help_text: Questa proposta è una modifica promossa
+          link_to_promoted_emendation_help_text: Questa domanda è una modifica promossa
           link_to_promoted_emendation_text: Vedi la modifica rifiutata.
           link_to_question_from_emendation_help_text: Questa è una modifica rifiutata
-          link_to_question_from_emendation_text: Vedi la Proposta
-          question_accepted_reason: 'Questa proposta è stata accettata perché:'
-          question_in_evaluation_reason: Questa proposta è in fase di valutazione
-          question_rejected_reason: 'Questa proposta è stata rifiutata perché:'
+          link_to_question_from_emendation_text: Vedi la Domanda
+          question_accepted_reason: 'Questa domanda è stata accettata perché:'
+          question_in_evaluation_reason: Questa domanda è in fase di valutazione
+          question_rejected_reason: 'Questa domanda è stata rifiutata perché:'
           read_less: Leggi di meno
           read_more: Leggi di più
           report: Report
-          withdraw_btn_hint: Puoi ritirare la tua proposta se cambi idea, purché non abbia ricevuto alcun supporto. La proposta non viene cancellata, apparirà nell'elenco delle proposte ritirate.
-          withdraw_confirmation_html: Sei sicuro di voler ritirare questa proposta?<br><br><strong>Questa azione non può essere annullata!</strong>
-          withdraw_question: Ritirare la proposta
+          withdraw_btn_hint: Puoi ritirare la tua domanda se cambi idea, purché non abbia ricevuto alcun supporto. La domanda non viene cancellata, apparirà nell'elenco delle domande ritirate.
+          withdraw_confirmation_html: Sei sicuro di voler ritirare questa domanda?<br><br><strong>Questa azione non può essere annullata!</strong>
+          withdraw_question: Ritirare la domanda
         tags:
           changed_from: "(modificato da <u>%{previous_name}</u> da un amministratore)"
         update:
-          title: Aggiorna proposta
+          title: Aggiorna domanda
         vote_button:
           already_voted: Già votata
           already_voted_hover: Ritira il supporto
@@ -806,71 +808,71 @@ it:
           count:
             one: VOTO
             other: VOTI
-          most_popular_question: La proposta più popolare
+          most_popular_question: La domanda più popolare
           need_more_votes: Hai bisogno di più voti
         voting_rules:
           can_accumulate_supports_beyond_threshold:
-            description: Ogni proposta può accumulare più di %{limit} supporti
+            description: Ogni domanda può accumulare più di %{limit} supporti
           minimum_votes_per_user:
-            description: Devi distribuire un minimo di %{votes} voti tra diverse proposte.
+            description: Devi distribuire un minimo di %{votes} voti tra diverse domande.
             given_enough_votes: Hai dato abbastanza supporti.
-            supports_remaining: Devi votare %{remaining_votes} altre proposte per i tuoi voti da prendere in considerazione.
+            supports_remaining: Devi votare %{remaining_votes} altre domande per i tuoi voti da prendere in considerazione.
           question_limit:
-            description: Puoi creare fino a %{limit} proposte.
+            description: Puoi creare fino a %{limit} domande.
           threshold_per_question:
-            description: Per essere accettate le proposte devono raggiungere %{limit} supporti
+            description: Per essere accettate le domande devono raggiungere %{limit} supporti
           title: 'Il voto è soggetto alle seguenti regole:'
           vote_limit:
-            description: Puoi votare fino a %{limit} proposte.
+            description: Puoi votare fino a %{limit} domande.
             left: Restano
             votes: Voti
         wizard_aside:
           back: Indietro
-          back_from_step_1: Torna alle proposte
-          back_from_step_2: Torna alle proposte
-          back_from_step_3: Torna a confrontare le proposte
+          back_from_step_1: Torna alle domande
+          back_from_step_2: Torna alle domande
+          back_from_step_3: Torna a confrontare le domande
           back_from_step_4: Torna a modificare la bozza
-          info: Stai creando una <strong>proposta</strong>.
+          info: Stai creando una <strong>domanda</strong>.
         wizard_steps:
           current_step: Fase attuale
           see_steps: vedere i passaggi
-          step_1: Crea la tua proposta
+          step_1: Crea la tua domanda
           step_2: Confronta
           step_3: Completa
-          step_4: Pubblica la tua proposta
+          step_4: Pubblica la tua domanda
           step_of: Step %{current_step_num} di %{total_steps}
-          title: Fasi di creazione delle proposte
+          title: Fasi di creazione delle domande
       questions_picker:
-        choose_questions: Scegli proposte
+        choose_questions: Scegli domande
         close: Chiudi
-        more_questions: Ci sono altre %{number} proposte. Affina la tua ricerca per localizzarle.
-        no_questions: Nessuna proposta corrisponde ai tuoi criteri di ricerca o non ci sono proposte.
+        more_questions: Ci sono altre %{number} domande. Affina la tua ricerca per localizzarle.
+        no_questions: Nessuna domanda corrisponde ai tuoi criteri di ricerca o non ci sono domande.
       publish:
-        error: Si sono verificati errori durante la pubblicazione della proposta.
-        success: Proposta pubblicata con successo.
+        error: Si sono verificati errori durante la pubblicazione della domanda.
+        success: Domanda pubblicata con successo.
       publish_answers:
-        success: Proposte di risposta correttamente pubblicate.
+        success: Domande di risposta correttamente pubblicate.
       update:
-        error: Ci sono stati errori quando si salva la proposta.
-        success: La proposta è stata aggiornata correttamente.
+        error: Ci sono stati errori quando si salva la domanda.
+        success: La domanda è stata aggiornata correttamente.
       update_draft:
-        error: Si sono verificati errori durante il salvataggio della bozza della proposta.
-        success: Bozza proposta aggiornata correttamente.
+        error: Si sono verificati errori durante il salvataggio della bozza della domanda.
+        success: Bozza domanda aggiornata correttamente.
       versions:
         collaborative_drafts:
           back_to_resource: Torna alla bozza collaborativa
         index:
           title: versioni
         questions:
-          back_to_resource: Torna alla proposta
+          back_to_resource: Torna alla domanda
       withdraw:
         errors:
-          has_supports: Questa proposta non può essere ritirata perché ha già dei supporti.
+          has_supports: Questa domanda non può essere ritirata perché ha già dei supporti.
     resource_links:
       copied_from_component:
-        question_question: Proposte correlate
+        question_question: Domande correlate
       included_projects:
         project_result: 'Risultati che appaiono in questo progetto:'
       included_questions:
-        question_project: 'Le proposte compaiono nei seguenti progetti:'
-        question_result: 'Le proposte compaiono nei seguenti risultati:'
+        question_project: 'Le domande compaiono nei seguenti progetti:'
+        question_result: 'Le domande compaiono nei seguenti risultati:'
