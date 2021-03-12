@@ -299,7 +299,7 @@ de:
         description: Anzahl der von den Benutzern akzeptierten Fragen
         object: Fragen
         title: Akzeptierte Fragen
-      endorsements:
+      question_endorsements:
         description: Anzahl der in Vorschlägen generierten Vermerke
         object: Änderungsvorschläge
         title: Änderungsvorschläge
@@ -307,7 +307,7 @@ de:
         description: Anzahl der Fragen
         object: Fragen
         title: Fragen
-      votes:
+      question_votes:
         description: Anzahl der Unterstützungen zu Vorschlägen
         object: Unterstützer
         title: Unterstützer

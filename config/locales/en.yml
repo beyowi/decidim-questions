@@ -322,7 +322,7 @@ en:
         description: Number of questions accepted
         object: questions
         title: Accepted questions
-      endorsements:
+      question_endorsements:
         description: Number of endorsements to questions
         object: endorsements
         title: Endorsements
@@ -330,7 +330,7 @@ en:
         description: Number of questions
         object: questions
         title: Questions
-      votes:
+      question_votes:
         description: Number of supports to questions
         object: supports
         title: Supports

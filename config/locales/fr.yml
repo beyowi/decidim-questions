@@ -321,7 +321,7 @@ fr:
         description: Nombre de questions acceptées par les utilisateurs
         object: questions
         title: Questions Acceptées
-      endorsements:
+      question_endorsements:
         description: Nombre d'avenants générés dans les questions
         object: soutiens
         title: Soutiens
@@ -329,7 +329,7 @@ fr:
         description: Nombre de questions générées
         object: questions
         title: Questions
-      votes:
+      question_votes:
         description: Nombre de votes générés dans les questions par les utilisateurs
         object: votes
         title: Votes

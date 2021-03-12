@@ -299,7 +299,7 @@ it:
         description: Numero di domande accettate dagli utenti
         object: domande
         title: Domande accettate
-      endorsements:
+      question_endorsements:
         description: Numero di approvazioni generate nelle domande
         object: Mi piace
         title: Mi piace
@@ -307,7 +307,7 @@ it:
         description: Numero di domande generate
         object: domande
         title: domande
-      votes:
+      question_votes:
         description: Numero di voti generati nelle domande degli utenti
         object: voti
         title: Voti

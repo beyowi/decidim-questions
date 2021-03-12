@@ -321,7 +321,7 @@ es:
         description: Número de preguntas aceptadas
         object: preguntas
         title: Preguntas aceptadas
-      endorsements:
+      question_endorsements:
         description: Número de adhesiones a preguntas
         object: adhesiones
         title: Adhesiones
@@ -329,7 +329,7 @@ es:
         description: Número de preguntas
         object: preguntas
         title: Preguntas
-      votes:
+      question_votes:
         description: Número de apoyos a las preguntas
         object: apoyos
         title: Apoyos
