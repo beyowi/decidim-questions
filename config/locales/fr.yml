@@ -52,15 +52,15 @@ fr:
             title:
               identical: ET le corps ne peut pas être identique
     models:
-      decidim/questions/accepted_question_event: Proposition acceptée
+      decidim/questions/accepted_question_event: Question acceptée
       decidim/questions/admin/update_question_category_event: Catégorie de question modifiée
       decidim/questions/admin/update_question_scope_event: La portée de la question a été modifiée
       decidim/questions/creation_enabled_event: Autoriser la création de nouvelles questions
       decidim/questions/endorsing_enabled_event: Activer le module de soutiens
-      decidim/questions/evaluating_question_event: Proposition en cours d'évaluation
-      decidim/questions/question_mentioned_event: Proposition mentionnée
-      decidim/questions/publish_question_event: Proposition publiée
-      decidim/questions/rejected_question_event: Proposition non retenue
+      decidim/questions/evaluating_question_event: Question en cours d'évaluation
+      decidim/questions/question_mentioned_event: Question mentionnée
+      decidim/questions/publish_question_event: Question publiée
+      decidim/questions/rejected_question_event: Question non retenue
       decidim/questions/voting_enabled_event: Activer le module de vote simple
   activerecord:
     models:
@@ -68,7 +68,7 @@ fr:
         one: Brouillon collaboratif
         other: Brouillons collaboratifs
       decidim/questions/question:
-        one: Proposition
+        one: Question
         other: Questions
       decidim/questions/question_note:
         one: Remarque
@@ -359,7 +359,7 @@ fr:
           questions: Questions
         models:
           question:
-            name: Proposition
+            name: Question
         participatory_texts:
           bulk-actions:
             are_you_sure: Etes-vous sûr de supprimer le brouillon du texte participatif?
@@ -415,7 +415,7 @@ fr:
             success: La réponse à la question a été publiée avec succès
           create:
             invalid: Il y a eu un problème lors de la création de cette question
-            success: Proposition créée avec succès
+            success: Question créée avec succès
           edit:
             title: Mise à jour de la question
             update: Mettre à jour
@@ -540,11 +540,11 @@ fr:
         filter_scope_values:
           all: Tout
         filter_state_values:
-          accepted: Accepté
-          all: Tout
+          accepted: Réponse publiée
+          all: Toutes
           evaluating: En cours d'évaluation
           not_answered: En attente de réponse
-          rejected: Rejeté
+          rejected: Retirées
         filter_type_values:
           all: Tout
           amendments: Amendements
@@ -670,7 +670,7 @@ fr:
           title: Étapes de création du brouillon collaboratif
       create:
         error: Il y a eu des erreurs lors de la sauvegarde de la question.
-        success: Proposition créée avec succès. Enregistrée comme brouillon.
+        success: Question créée avec succès. Enregistrée comme brouillon.
       destroy_draft:
         error: Des erreurs sont survenues lors de la suppression du brouillon de la question.
         success: Le brouillon de la question a bien été supprimé.
@@ -688,7 +688,7 @@ fr:
             comments: Commentaires
             id: ID
             notes: Remarques
-            official_question: Proposition officielle
+            official_question: Question officielle
             published_answer: Réponse publiée
             published_at: Publiée à
             scope: Périmètre d'application
@@ -830,7 +830,7 @@ fr:
           count:
             one: VOTE
             other: VOTES
-          most_popular_question: Proposition la plus populaire
+          most_popular_question: Question la plus populaire
           need_more_votes: Besoin de plus de votes
         voting_rules:
           can_accumulate_supports_beyond_threshold:
@@ -871,12 +871,12 @@ fr:
         no_questions: Aucune question ne correspond à vos critères de recherche ou il n'y a aucune question.
       publish:
         error: Il y a eu des erreurs lors de la publication de la question.
-        success: Proposition publiée avec succès.
+        success: Question publiée avec succès.
       publish_answers:
         success: Réponses aux questions publiées avec succès.
       update:
         error: Des erreurs se sont produites lors de l'enregistrement de la question.
-        success: Proposition mise à jour avec succès.
+        success: Question mise à jour avec succès.
       update_draft:
         error: Des erreurs sont survenues lors de l'enregistrement du brouillon de la question.
         success: Le brouillon de question a été mis à jour.
@@ -896,5 +896,5 @@ fr:
       included_projects:
         project_result: 'Réalisations apparaissant dans ce projet :'
       included_questions:
-        question_project: 'Proposition figurant dans ces projets :'
-        question_result: 'Proposition figurant dans ces réalisations :'
+        question_project: 'Question figurant dans ces projets :'
+        question_result: 'Question figurant dans ces réalisations :'
