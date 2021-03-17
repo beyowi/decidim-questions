@@ -317,6 +317,7 @@ de:
           questions: Fragen
       statistics:
         questions_count: Fragen
+        questions_accepted: Akzeptierte Fragen
     participatory_spaces:
       highlighted_questions:
         see_all: Alle anzeigen (%{count})

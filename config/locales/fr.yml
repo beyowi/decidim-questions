@@ -339,6 +339,7 @@ fr:
           questions: Questions
       statistics:
         questions_count: Questions
+        questions_accepted: Questions acceptées
     participatory_spaces:
       highlighted_questions:
         see_all: Tout voir (%{count})

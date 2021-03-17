@@ -340,6 +340,7 @@ en:
           questions: Questions
       statistics:
         questions_count: Questions
+        questions_accepted: Accepted questions
     participatory_spaces:
       highlighted_questions:
         see_all: See all questions (%{count})

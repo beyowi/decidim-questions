@@ -317,6 +317,7 @@ it:
           questions: domande
       statistics:
         questions_count: domande
+        questions_accepted: Domande accettate
     participatory_spaces:
       highlighted_questions:
         see_all: Vedi tutto (%{count})
