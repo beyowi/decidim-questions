@@ -396,10 +396,10 @@ fr:
             success: Texte participatif mis à jour avec succès.
         question_answers:
           form:
-            accepted: Retenue
+            accepted: Réponse publiée
             answer_question: Répondre
             evaluating: En cours d'évaluation
-            rejected: Non retenue
+            rejected: Retirée
             title: Réponse à la question %{title}
         question_notes:
           create:
@@ -524,10 +524,10 @@ fr:
           create: "%{user_name} a assigné la question %{resource_name} à un évaluateur"
           delete: "%{user_name} a désassigné un évaluateur de la question %{question_title}"
       answers:
-        accepted: Retenue
+        accepted: Réponse publiée
         evaluating: En cours d'évaluation
         not_answered: En attente de réponse
-        rejected: Non retenue
+        rejected: Retirée
         withdrawn: Retirée
       application_helper:
         filter_category_values:
