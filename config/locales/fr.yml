@@ -807,7 +807,7 @@ fr:
           link_to_promoted_emendation_text: Voir les demandes de modification rejetées.
           link_to_question_from_emendation_help_text: Ceci est une demande de modification rejetée
           link_to_question_from_emendation_text: Voir la question
-          question_accepted_reason: 'Cette question a été retenue parce que :'
+          question_accepted_reason: 'Réponse apportée :'
           question_in_evaluation_reason: Cette question est en cours d'évaluation
           question_rejected_reason: 'Cette question n''a pas été retenue parce que :'
           read_less: Lire moins
